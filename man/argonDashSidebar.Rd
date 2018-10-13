@@ -2,7 +2,7 @@
 % Please edit documentation in R/dashboardSidebar.R
 \name{argonDashSidebar}
 \alias{argonDashSidebar}
-\title{Create a Boostrap 4 dashboard page}
+\title{Create a Boostrap 4 dashboard sidebar}
 \usage{
 argonDashSidebar(..., id, brand_url = NULL, brand_logo = NULL,
   vertical = TRUE, side = c("left", "right"), size = c("s", "md",

@@ -1,4 +1,4 @@
-#' Create a Boostrap 4 dashboard page
+#' Create a Boostrap 4 dashboard sidebar
 #'
 #' Build an argon dashboard sidebar
 #'
