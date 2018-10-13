@@ -1,6 +1,6 @@
 #' Create a Boostrap 4 dashboard page
 #'
-#' Build an Argon dashboard page
+#' Build an argon dashboard page
 #'
 #' @param navbar Bootstrap 4 dashboard navbar.
 #' @param sidebar Bootstrap 4 dashboard main sidebar.
