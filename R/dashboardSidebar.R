@@ -82,7 +82,7 @@ argonDashSidebar <- function(..., id, brand_url = NULL, brand_logo = NULL,
 argonSidebarMenu <- function(...) {
   shiny::tags$div(
     class = "nav-wrapper",
-    shiny::tags$ul(class = "nav flex-column nav-pills mb-3", `aria-orientation`="vertical",...)
+    shiny::tags$div(class = "nav flex-column nav-pills", `aria-orientation` = "vertical", ...)
     
   )
 }
@@ -108,17 +108,15 @@ argonSidebarMenuItem <- function(..., tabName = NULL, icon = NULL,
   if(!is.null(icon)) iconCl <- paste0(iconCl, " ni-", icon)
   if(!is.null(icon_color)) iconCl <- paste0(iconCl, " text-", icon_color)
   
-  shiny::tags$li(
-    class = "nav-item",
-    shiny::tags$a(
-      class = "nav-link",
-      id = paste0("tab-", tabName),
-      href = paste0("#shiny-tab-", tabName),
-      `data-toggle` = "tab",
-      `data-value` = tabName,
-      shiny::tags$i(class = iconCl),
-      ...
-    )
+  
+  shiny::tags$a(
+    class = "nav-link",
+    id = paste0("tab-", tabName),
+    href = paste0("#shiny-tab-", tabName),
+    `data-toggle` = "tab",
+    `data-value` = tabName,
+    shiny::tags$i(class = iconCl),
+    ...
   )
 }
 
