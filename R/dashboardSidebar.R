@@ -80,7 +80,11 @@ argonDashSidebar <- function(..., id, brand_url = NULL, brand_logo = NULL,
 #'
 #' @export
 argonSidebarMenu <- function(...) {
-  shiny::tags$ul(class = "navbar-nav", ...)
+  shiny::tags$div(
+    class = "nav-wrapper",
+    shiny::tags$ul(class = "nav flex-column nav-pills mb-3", `aria-orientation`="vertical",...)
+    
+  )
 }
 
 
