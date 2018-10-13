@@ -22,6 +22,10 @@ argonDashSidebar <- function(..., id, brand_url = NULL, brand_logo = NULL,
                              size = c("s", "md", "lg"), skin = c("light", "dark"), 
                              background = "white") {
   
+  side <- match.arg(side)
+  size <- match.arg(size)
+  skin <- match.arg(skin)
+  
   sidebarCl <- "navbar"
   if (vertical) {
     sidebarCl <- paste0(sidebarCl, " navbar-vertical")
@@ -29,7 +33,7 @@ argonDashSidebar <- function(..., id, brand_url = NULL, brand_logo = NULL,
     sidebarCl <- paste0(sidebarCl, " navbar-horizontal")
   }
   if (!is.null(side)) sidebarCl <- paste0(sidebarCl, " fixed-", side)
-  if (!is.null(size)) sidebarCl <- paste0(sidebarCl, ", navbar-expand-", size)
+  if (!is.null(size)) sidebarCl <- paste0(sidebarCl, " navbar-expand-", size)
   if (!is.null(skin)) sidebarCl <- paste0(sidebarCl, " navbar-", skin)
   if (!is.null(background)) sidebarCl <- paste0(sidebarCl, " bg-", background)
   
@@ -108,7 +112,7 @@ argonSidebarMenuItem <- function(..., tabName = NULL, icon = NULL,
       href = paste0("#shiny-tab-", tabName),
       `data-toggle` = "tab",
       `data-value` = tabName,
-      shiny::icon(class = iconCl),
+      shiny::tags$i(class = iconCl),
       ...
     )
   )

@@ -2,7 +2,7 @@
 #'
 #' Build an argon dashboard body
 #'
-#' @param ... Body content, slot for bs4TabItems.
+#' @param ... Body content, slot for \link{argonTabItems}
 #' 
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'

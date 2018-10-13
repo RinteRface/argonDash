@@ -7,7 +7,7 @@
 argonDashBody(...)
 }
 \arguments{
-\item{...}{Body content, slot for bs4TabItems.}
+\item{...}{Body content, slot for \link{argonTabItems}}
 }
 \description{
 Build an argon dashboard body
