@@ -50,18 +50,48 @@ argonDashSidebar <- function(..., id, brand_url = NULL, brand_logo = NULL,
         class = "navbar-toggler collapsed",
         `data-target` = "#sidenav-collapse-main",
         `data-toggle` = "collapse",
-        type = "button"
+        type = "button",
+        shiny::tags$span(class = "navbar-toggler-icon")
       ),
       # Brand
       shiny::a(
         class = "navbar-brand pt-0",
         href = brand_url,
+        target = "_blank",
         shiny::img(class = "navbar-brand-img", src = brand_logo)
       ),
       # Main content
       shiny::tags$div(
         class = "collapse navbar-collapse", 
         id = "sidenav-collapse-main",
+        # sidebar header when collapsed
+        shiny::tags$div(
+          class = "navbar-collapse-header d-md-none",
+          shiny::fluidRow(
+            shiny::tags$div(
+              class = "col-6 collapse-brand",
+              shiny::a(
+                href = brand_url,
+                target = "_blank",
+                shiny::img(class = "navbar-brand-img", src = brand_logo) 
+              )
+            ),
+            shiny::tags$div(
+              class = "col-6 collapse-close",
+              shiny::tags$button(
+                `aria-control` = id,
+                `aria-expanded` = "true",
+                `aria-label` = "Toggle sidenav",
+                class = "navbar-toggler",
+                `data-target` = "#sidenav-collapse-main",
+                `data-toggle` = "collapse",
+                type = "button",
+                shiny::tags$span(),
+                shiny::tags$span()
+              )
+            )
+          )
+        ),
         ...
       )
     )
@@ -82,8 +112,11 @@ argonDashSidebar <- function(..., id, brand_url = NULL, brand_logo = NULL,
 argonSidebarMenu <- function(...) {
   shiny::tags$div(
     class = "nav-wrapper",
-    shiny::tags$div(class = "nav flex-column nav-pills", `aria-orientation` = "vertical", ...)
-    
+    shiny::tags$div(
+      class = "nav flex-column nav-pills", 
+      `aria-orientation` = "vertical", 
+      ...
+    )
   )
 }
 
