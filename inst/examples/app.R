@@ -126,6 +126,8 @@ shiny::shinyApp(
     header = argonDashHeader(
       gradient = TRUE,
       color = "primary",
+      separator = TRUE,
+      separator_color = "secondary",
       argonCard(
         title = "Argon Card",
         src = "http://www.google.com",
@@ -170,7 +172,6 @@ shiny::shinyApp(
         ),
         argonTabItem(
           tabName = "tabs",
-          br(), br(), br(),
           fluidRow(
             argonTabSet(
               id = "tab-1",
@@ -359,7 +360,6 @@ shiny::shinyApp(
         ),
         argonTabItem(
           tabName = "effects",
-          br(), br(), br(), br(),
           fluidRow(
             argonColumn(
               width = 6, 
@@ -391,7 +391,7 @@ shiny::shinyApp(
             fluidRow(
               argonCard(
                 title = "Perspective effect"
-              ) %>% argonPersp(side = "right")
+              )
             )
           )
         )

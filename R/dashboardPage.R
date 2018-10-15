@@ -50,7 +50,7 @@ argonDashPage <- function(title = NULL, description = NULL, author = NULL,
           header,
           # page content
           shiny::tags$div(
-            class = "container-fluid mt--7",
+            class = "container-fluid mt--1",
             body,
             footer
           )

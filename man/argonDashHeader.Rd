@@ -4,7 +4,8 @@
 \alias{argonDashHeader}
 \title{Create a Boostrap 4 dashboard header}
 \usage{
-argonDashHeader(..., gradient = TRUE, color = NULL)
+argonDashHeader(..., gradient = TRUE, color = NULL,
+  separator = FALSE, separator_color = "secondary")
 }
 \arguments{
 \item{...}{Any element}
@@ -12,6 +13,10 @@ argonDashHeader(..., gradient = TRUE, color = NULL)
 \item{gradient}{Whether to apply a gradient effect. TRUE by default.}
 
 \item{color}{Header color. See \url{https://demos.creative-tim.com/argon-design-system/index.html}.}
+
+\item{separator}{Header bottom separator. FALSE by default.}
+
+\item{separator_color}{Separator color. "secondary" by default.}
 }
 \description{
 Build an argon dashboard header
