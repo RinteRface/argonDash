@@ -38,7 +38,8 @@ argonInfoCard <- function(value, title = NULL, stat = NULL, stat_icon = NULL,
   }
   
   if (!is.null(background_color))
-    text_color <- if (background_color == "default") "text-white" else NULL
+    if (background_color == "default") text_color <- "text-white" else text_color <- NULL
+  else text_color <- NULL
   
   statCl <- if (stat > 0) "text-success mr-2" else "text-danger mr-2"
   
