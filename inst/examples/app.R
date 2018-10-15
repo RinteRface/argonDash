@@ -84,7 +84,7 @@ shiny::shinyApp(
           <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <div class="media align-items-center">
           <span class="avatar avatar-sm rounded-circle">
-          <img alt="Image placeholder" src="./assets/img/theme/team-4-800x800.jpg">
+          <img alt="Image placeholder" src="https://demos.creative-tim.com/argon-dashboard/assets/img/theme/team-4-800x800.jpg">
           </span>
           <div class="media-body ml-2 d-none d-lg-block">
           <span class="mb-0 text-sm  font-weight-bold">Jessica Jones</span>
@@ -148,7 +148,7 @@ shiny::shinyApp(
       argonTabItems(
         argonTabItem(
           tabName = "cards",
-          fluidRow(
+          argonRow(
             argonColumn(
               width = 6,
               argonCard(
@@ -186,12 +186,20 @@ shiny::shinyApp(
                 background_color = NULL,
                 gradient = FALSE, 
                 floating = FALSE,
-                "This is the content"
+                radioButtons(
+                  "dist", 
+                  "Distribution type:",
+                  c("Normal" = "norm",
+                    "Uniform" = "unif",
+                    "Log-normal" = "lnorm",
+                    "Exponential" = "exp")
+                ),
+                plotOutput("plot")
               )
             ) 
           ),
           br(),
-          fluidRow(
+          argonRow(
             argonInfoCard(
               value = "350,897", 
               title = "TRAFFIC", 
@@ -238,7 +246,7 @@ shiny::shinyApp(
         ),
         argonTabItem(
           tabName = "tabs",
-          fluidRow(
+          argonRow(
             argonTabSet(
               id = "tab-1",
               card_wrapper = TRUE,
@@ -288,7 +296,7 @@ shiny::shinyApp(
         ),
         argonTabItem(
           tabName = "alerts",
-          fluidRow(
+          argonRow(
             argonColumn(
               width = 4,
               argonAlert(
@@ -320,7 +328,7 @@ shiny::shinyApp(
         ),
         argonTabItem(
           tabName = "images",
-          fluidRow(
+          argonRow(
             argonColumn(
               width = 6,
               argonImage(
@@ -335,13 +343,13 @@ shiny::shinyApp(
               argonImage(
                 url = "https://www.google.com",
                 src = "https://demos.creative-tim.com/argon-design-system/assets/img/theme/promo-1.png",
-                floating = FALSE,
-                card_mode = TRUE
+                floating = TRUE,
+                card_mode = FALSE
               )
             )
           ),
           br(),
-          fluidRow(
+          argonRow(
             argonCarousel(
               id = "carousel1",
               argonCarouselItem(
@@ -352,12 +360,12 @@ shiny::shinyApp(
                 src = "https://demos.creative-tim.com/argon-design-system/assets/img/theme/img-2-1200x1000.jpg",
                 active = FALSE
               )
-            )
+            ) %>% argonPersp(side = "left")
           )
         ),
         argonTabItem(
           tabName = "badges",
-          fluidRow(
+          argonRow(
             argonColumn(
               width = 3,
               argonBadge(
@@ -403,7 +411,7 @@ shiny::shinyApp(
         ),
         argonTabItem(
           tabName = "profile",
-          fluidRow(
+          argonRow(
             argonColumn(
               width = 3,
               argonUser(
@@ -437,7 +445,7 @@ shiny::shinyApp(
               )
             )
           ),
-          fluidRow(
+          argonRow(
             argonColumn(
               width = 12,
               argonProfile(
@@ -474,7 +482,7 @@ shiny::shinyApp(
         ),
         argonTabItem(
           tabName = "effects",
-          fluidRow(
+          argonRow(
             argonColumn(
               width = 6, 
               h1("Perspective effect"),
@@ -506,8 +514,8 @@ shiny::shinyApp(
               src = "https://www.google.com",
               icon = "ui-04",
               status = "success",
-              shadow = TRUE,
-              border_level = 2,
+              #shadow = TRUE,
+              border_level = 0,
               #gradient = TRUE,
               #background_color = "orange",
               hover_shadow = TRUE,
@@ -526,7 +534,7 @@ shiny::shinyApp(
       )
     ),
     footer = argonDashFooter(
-      copyrights = "Divad Nojnarg, 2018",
+      copyrights = "@Divad Nojnarg, 2018",
       src = "https://github.com/DivadNojnarg",
       argonFooterMenu(
         argonFooterItem("RinteRface", src = "https://github.com/RinteRface"),
@@ -537,6 +545,17 @@ shiny::shinyApp(
   server = function(input, output) {
     output$distPlot <- renderPlot({
       hist(rnorm(input$obs))
+    })
+    
+    output$plot <- renderPlot({
+      dist <- switch(input$dist,
+                     norm = rnorm,
+                     unif = runif,
+                     lnorm = rlnorm,
+                     exp = rexp,
+                     rnorm)
+      
+      hist(dist(500))
     })
   }
 )

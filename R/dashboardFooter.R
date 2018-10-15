@@ -71,7 +71,8 @@ argonFooterItem <- function(..., src = NULL) {
     shiny::a(
       class = "nav-link",
       target = "_blank",
-      href = src
+      href = src,
+      ...
     )
   )
 }
