@@ -144,7 +144,7 @@ argonSidebarMenuItem <- function(..., tabName = NULL, icon = NULL,
   
   
   shiny::tags$a(
-    class = "nav-link",
+    class = "nav-link  mt-1 mb-1 shadow",
     id = paste0("tab-", tabName),
     href = paste0("#shiny-tab-", tabName),
     `data-toggle` = "tab",

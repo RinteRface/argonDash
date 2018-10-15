@@ -59,6 +59,18 @@ shiny::shinyApp(
           icon = "spaceship",
           icon_color = "info",
           "Profile"
+        ),
+        argonSidebarMenuItem(
+          tabName = "effects",
+          icon = "atom",
+          icon_color = "black",
+          "CSS effects"
+        ),
+        argonSidebarMenuItem(
+          tabName = "sections",
+          icon = "credit-card",
+          icon_color = "grey",
+          "Sections"
         )
       ),
       argonSidebarDivider(),
@@ -342,6 +354,44 @@ shiny::shinyApp(
                   groove structure. An artist of considerable 
                   range."
               )
+            )
+          )
+        ),
+        argonTabItem(
+          tabName = "effects",
+          br(), br(), br(), br(),
+          fluidRow(
+            argonColumn(
+              width = 6, 
+              h1("Perspective effect"),
+              h6("Disabled on small screens")
+            ),
+            argonColumn(
+              width = 6, 
+              argonPersp(
+                side = "right",
+                argonImage(
+                  url = "https://www.google.com",
+                  src = "https://demos.creative-tim.com/argon-design-system/assets/img/theme/promo-1.png",
+                  floating = TRUE,
+                  card_mode = TRUE,
+                  hover_lift = FALSE
+                )
+              )
+            )
+          )
+        ),
+        argonTabItem(
+          tabName = "sections",
+          argonSection(
+            gradient = TRUE,
+            size = "lg",
+            status = "primary",
+            separator = TRUE,
+            fluidRow(
+              argonCard(
+                title = "Perspective effect"
+              ) %>% argonPersp(side = "right")
             )
           )
         )
