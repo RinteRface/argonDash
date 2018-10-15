@@ -8,7 +8,8 @@ Description: Create awesome bootstrap 4 template powered by argon.
    See more here <file:///Users/macdavidgranjon/Desktop/argon-dashboard-v1.0.0/index.html>.
 License: GPL-2
 Imports: shiny, 
-    htmltools
+    htmltools,
+    argonR
 URL: https://github.com/RinteRface/argonDash
 BugReports: https://github.com/RinteRface/argonDash/issues
 Encoding: UTF-8

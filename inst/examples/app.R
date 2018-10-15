@@ -136,7 +136,7 @@ shiny::shinyApp(
         shadow_size = NULL,
         hover_shadow = FALSE,
         border_level = 0,
-        icon = "phone",
+        icon = "atom",
         status = "primary",
         background_color = NULL,
         gradient = FALSE, 
@@ -149,24 +149,90 @@ shiny::shinyApp(
         argonTabItem(
           tabName = "cards",
           fluidRow(
-            argonCard(
-              src = "https://www.google.com",
-              icon = "ui-04",
-              status = "success",
-              shadow = TRUE,
-              border_level = 2,
-              #gradient = TRUE,
-              #background_color = "orange",
-              hover_shadow = TRUE,
-              title = "Shiny Inputs",
-              sliderInput(
-                "obs", 
-                "Number of observations:",
-                min = 0, 
-                max = 1000, 
-                value = 500
-              ),
-              plotOutput("distPlot")
+            argonColumn(
+              width = 6,
+              argonCard(
+                width = 12,
+                src = "https://www.google.com",
+                icon = "ui-04",
+                status = "success",
+                shadow = TRUE,
+                border_level = 2,
+                hover_shadow = TRUE,
+                title = "Shiny Inputs",
+                sliderInput(
+                  "obs", 
+                  "Number of observations:",
+                  min = 0, 
+                  max = 1000, 
+                  value = 500
+                ),
+                plotOutput("distPlot")
+              )
+            ),
+            argonColumn(
+              width = 6,
+              argonCard(
+                width = 12,
+                title = "Argon Card",
+                src = "http://www.google.com",
+                hover_lift = TRUE,
+                shadow = TRUE,
+                shadow_size = NULL,
+                hover_shadow = FALSE,
+                border_level = 0,
+                icon = "atom",
+                status = "primary",
+                background_color = NULL,
+                gradient = FALSE, 
+                floating = FALSE,
+                "This is the content"
+              )
+            ) 
+          ),
+          br(),
+          fluidRow(
+            argonInfoCard(
+              value = "350,897", 
+              title = "TRAFFIC", 
+              stat = 3.48, 
+              stat_icon = "arrow-up",
+              description = "Since last month", 
+              icon = "chart-bar", 
+              icon_background = "danger",
+              hover_lift = TRUE
+            ),
+            argonInfoCard(
+              value = "2,356", 
+              title = "NEW USERS", 
+              stat = -3.48, 
+              stat_icon = "arrow-down",
+              description = "Since last week", 
+              icon = "chart-pie", 
+              icon_background = "warning",
+              shadow = TRUE
+            ),
+            argonInfoCard(
+              value = "924", 
+              title = "SALES", 
+              stat = -1.10, 
+              stat_icon = "arrow-down",
+              description = "Since yesterday", 
+              icon = "users", 
+              icon_background = "yellow",
+              background_color = "default"
+            ),
+            argonInfoCard(
+              value = "49,65%", 
+              title = "PERFORMANCE", 
+              stat = 12, 
+              stat_icon = "arrow-up",
+              description = "Since last month", 
+              icon = "percent", 
+              icon_background = "info",
+              gradient = TRUE,
+              background_color = "orange",
+              hover_lift = TRUE
             )
           )
         ),
@@ -273,6 +339,20 @@ shiny::shinyApp(
                 card_mode = TRUE
               )
             )
+          ),
+          br(),
+          fluidRow(
+            argonCarousel(
+              id = "carousel1",
+              argonCarouselItem(
+                src = "https://demos.creative-tim.com/argon-design-system/assets/img/theme/img-1-1200x1000.jpg",
+                active = TRUE
+              ),
+              argonCarouselItem(
+                src = "https://demos.creative-tim.com/argon-design-system/assets/img/theme/img-2-1200x1000.jpg",
+                active = FALSE
+              )
+            )
           )
         ),
         argonTabItem(
@@ -323,6 +403,40 @@ shiny::shinyApp(
         ),
         argonTabItem(
           tabName = "profile",
+          fluidRow(
+            argonColumn(
+              width = 3,
+              argonUser(
+                title = "Ryan Tompson",
+                subtitle = "Web Developer",
+                src = "https://demos.creative-tim.com/argon-design-system/assets/img/theme/team-1-800x800.jpg"
+              )
+            ),
+            argonColumn(
+              width = 3,
+              argonUser(
+                title = "Romina Hadid",
+                subtitle = "Marketing Strategist",
+                src = "https://demos.creative-tim.com/argon-design-system/assets/img/theme/team-2-800x800.jpg"
+              )
+            ),
+            argonColumn(
+              width = 3,
+              argonUser(
+                title = "Alexander Smith",
+                subtitle = "UI/UX Designer",
+                src = "https://demos.creative-tim.com/argon-design-system/assets/img/theme/team-3-800x800.jpg"
+              )
+            ),
+            argonColumn(
+              width = 3,
+              argonUser(
+                title = "John Doe",
+                subtitle = "Founder and CEO",
+                src = "https://demos.creative-tim.com/argon-design-system/assets/img/theme/team-4-800x800.jpg"
+              )
+            )
+          ),
           fluidRow(
             argonColumn(
               width = 12,
@@ -383,16 +497,30 @@ shiny::shinyApp(
         ),
         argonTabItem(
           tabName = "sections",
-          argonSection(
+          argonDashHeader(
             gradient = TRUE,
-            size = "lg",
-            status = "primary",
+            color = "warning",
             separator = TRUE,
-            fluidRow(
-              argonCard(
-                title = "Perspective effect"
-              )
+            separator_color = "info",
+            argonCard(
+              src = "https://www.google.com",
+              icon = "ui-04",
+              status = "success",
+              shadow = TRUE,
+              border_level = 2,
+              #gradient = TRUE,
+              #background_color = "orange",
+              hover_shadow = TRUE,
+              title = "Shiny Inputs"
             )
+          ),
+          argonDashHeader(
+            gradient = FALSE,
+            color = "info",
+            separator = TRUE,
+            separator_color = "secondary",
+            h1("Section Text"),
+            h3("Some text here")
           )
         )
       )
