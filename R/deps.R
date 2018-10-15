@@ -22,8 +22,16 @@ addDeps <- function(x) {
   # JS
   bootstrap_js <- "bootstrap.bundle.min.js"
   argon_js <- "argon.min.js"
+  argonDash_js <- "argonDash.js"
   
   dashboardDeps <- list(
+    # argonDash custom js
+    htmltools::htmlDependency(
+      name = "argonDash",
+      version = as.character(utils::packageVersion("argonDash")),
+      src = c(file = system.file("argonDash-0.1.0", package = "argonDash")),
+      script = argonDash_js
+    ),
     # bootstrap deps
     htmltools::htmlDependency(
       name = "bootstrap", 

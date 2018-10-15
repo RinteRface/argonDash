@@ -115,6 +115,7 @@ argonSidebarMenu <- function(...) {
     shiny::tags$div(
       class = "nav flex-column nav-pills", 
       `aria-orientation` = "vertical", 
+      id = "sidebar-menu",
       ...
     )
   )
