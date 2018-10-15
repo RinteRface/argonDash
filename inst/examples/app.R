@@ -19,16 +19,46 @@ shiny::shinyApp(
       brand_logo = "https://demos.creative-tim.com/argon-design-system/assets/img/brand/blue.png",
       argonSidebarMenu(
         argonSidebarMenuItem(
-          tabName = "test",
+          tabName = "cards",
           icon = "tv-2",
           icon_color = "primary",
-          "Item 1"
+          "Cards"
         ),
         argonSidebarMenuItem(
-          tabName = "item",
+          tabName = "tabs",
           icon = "planet",
           icon_color = "warning",
-          "Item 2"
+          "Tabs"
+        ),
+        argonSidebarMenuItem(
+          tabName = "alerts",
+          icon = "bullet-list-67",
+          icon_color = "danger",
+          "Alerts"
+        ),
+        argonSidebarMenuItem(
+          tabName = "images",
+          icon = "circle-08",
+          icon_color = "success",
+          "Images"
+        ),
+        argonSidebarMenuItem(
+          tabName = "badges",
+          icon = "ui-04",
+          icon_color = "pink",
+          "Badges"
+        ),
+        argonSidebarMenuItem(
+          tabName = "progress",
+          icon = "pin-3",
+          icon_color = "yellow",
+          "Progress"
+        ),
+        argonSidebarMenuItem(
+          tabName = "profile",
+          icon = "spaceship",
+          icon_color = "info",
+          "Profile"
         )
       ),
       argonSidebarDivider(),
@@ -103,155 +133,215 @@ shiny::shinyApp(
     body = argonDashBody(
       argonTabItems(
         argonTabItem(
-          tabName = "test",
-          shiny::tags$div(
-            class = "card",
-            shiny::tags$div(
-              class = "card-body",
-              sliderInput("obs", "Number of observations:",
-                          min = 0, max = 1000, value = 500
+          tabName = "cards",
+          fluidRow(
+            argonCard(
+              src = "https://www.google.com",
+              icon = "ui-04",
+              status = "success",
+              shadow = TRUE,
+              border_level = 2,
+              #gradient = TRUE,
+              #background_color = "orange",
+              hover_shadow = TRUE,
+              title = "Shiny Inputs",
+              sliderInput(
+                "obs", 
+                "Number of observations:",
+                min = 0, 
+                max = 1000, 
+                value = 500
               ),
               plotOutput("distPlot")
             )
           )
         ),
         argonTabItem(
-          tabName = "item",
+          tabName = "tabs",
           br(), br(), br(),
-          argonTabSet(
-            id = "tab-1",
-            card_wrapper = TRUE,
-            horizontal = TRUE,
-            circle = FALSE,
-            size = "sm",
-            argonTab(
-              tabName = "Tab 1",
-              active = FALSE,
-              "Tab 1 content"
-            ),
-            argonTab(
-              tabName = "Tab 2",
-              active = TRUE,
-              "Tab 2 content"
-            ),
-            argonTab(
-              tabName = "Tab 3",
-              active = FALSE,
-              "Tab 3 content"
-            )
-          ),
-          argonAlert(
-            icon = "basket",
-            status = "danger",
-            "This is an alert",
-            closable = TRUE
-          ),
-          argonImage(
-            url = "https://www.google.com",
-            src = "https://demos.creative-tim.com/argon-design-system/assets/img/theme/promo-1.png",
-            floating = FALSE,
-            card_mode = TRUE
-          ),
-          argonBadge(
-            text = "My badge",
-            src = "https://www.google.com",
-            pill = TRUE,
-            status = "danger"
-          ),
-          argonProgress(value = 10, status = "danger"),
-          # argonSection(
-          #   gradient = TRUE,
-          #   size = "lg",
-          #   status = "primary",
-          #   separator = TRUE,
-          #   fluidRow(
-          #     argonCard(
-          #       title = "Perspective effect"
-          #     ) %>% argonPersp(side = "right")
-          #   )
-          # ),
           fluidRow(
-            width = 6,
-            HTML(
-              paste0(
-                '<div class="pr-md-5">
-                <div class="icon icon-lg icon-shape icon-shape-success shadow rounded-circle mb-5">
-                <i class="ni ni-settings-gear-65"></i>
-                </div>
-                <h3>Awesome features</h3>
-                <p>The kit comes with three pre-built pages to help you get started faster. You can change the text and images and youre good to go.</p>
-                <ul class="list-unstyled mt-5">
-                <li class="py-2">
-                <div class="d-flex align-items-center">
-                <div>
-                <div class="badge badge-circle badge-success mr-3">
-                <i class="ni ni-settings-gear-65"></i>
-                </div>
-                </div>
-                <div>
-                <h6 class="mb-0">Carefully crafted components</h6>
-                </div>
-                </div>
-                </li>
-                <li class="py-2">
-                <div class="d-flex align-items-center">
-                <div>
-                <div class="badge badge-circle badge-success mr-3">
-                <i class="ni ni-html5"></i>
-                </div>
-                </div>
-                <div>
-                <h6 class="mb-0">Amazing page examples</h6>
-                </div>
-                </div>
-                </li>
-                <li class="py-2">
-                <div class="d-flex align-items-center">
-                <div>
-                <div class="badge badge-circle badge-success mr-3">
-                <i class="ni ni-satisfied"></i>
-                </div>
-                </div>
-                <div>
-                <h6 class="mb-0">Super friendly support team</h6>
-                </div>
-                </div>
-                </li>
-                </ul>
-                </div>
-                '
+            argonTabSet(
+              id = "tab-1",
+              card_wrapper = TRUE,
+              horizontal = TRUE,
+              circle = FALSE,
+              size = "sm",
+              width = 6,
+              argonTab(
+                tabName = "Tab 1",
+                active = FALSE,
+                "Tab 1 content"
+              ),
+              argonTab(
+                tabName = "Tab 2",
+                active = TRUE,
+                "Tab 2 content"
+              ),
+              argonTab(
+                tabName = "Tab 3",
+                active = FALSE,
+                "Tab 3 content"
+              )
+            ),
+            argonTabSet(
+              id = "tab-2",
+              card_wrapper = TRUE,
+              horizontal = FALSE,
+              circle = TRUE,
+              size = "sm",
+              argonTab(
+                tabName = "Tab 4",
+                active = FALSE,
+                "Tab 4 content"
+              ),
+              argonTab(
+                tabName = "Tab 5",
+                active = TRUE,
+                "Tab 5 content"
+              ),
+              argonTab(
+                tabName = "Tab 6",
+                active = FALSE,
+                "Tab 6 content"
               )
             )
-          ),
+          )
+        ),
+        argonTabItem(
+          tabName = "alerts",
           fluidRow(
-            argonProfile(
-              title = "John",
-              subtitle = "Japan, Kagoshima",
-              src = "https://demos.creative-tim.com/argon-design-system/assets/img/theme/team-1-800x800.jpg",
-              url = "https://www.google.com",
-              url_1 = "https://www.google.com",
-              url_2 = "https://www.google.com",
-              stats = argonProfileStats(
-                argonProfileStat(
-                  value = 22,
-                  description = "Friends"
+            argonColumn(
+              width = 4,
+              argonAlert(
+                icon = "basket",
+                status = "danger",
+                "This is an alert",
+                closable = TRUE
+              )
+            ),
+            argonColumn(
+              width = 4,
+              argonAlert(
+                icon = "ui-02",
+                status = "success",
+                "This is an alert",
+                closable = TRUE
+              )
+            ),
+            argonColumn(
+              width = 4,
+              argonAlert(
+                icon = "ui-03",
+                status = "info",
+                "This is an alert",
+                closable = TRUE
+              )
+            )
+          )
+        ),
+        argonTabItem(
+          tabName = "images",
+          fluidRow(
+            argonColumn(
+              width = 6,
+              argonImage(
+                url = "https://www.google.com",
+                src = "https://demos.creative-tim.com/argon-design-system/assets/img/theme/promo-1.png",
+                floating = FALSE,
+                card_mode = TRUE
+              )
+            ),
+            argonColumn(
+              width = 6,
+              argonImage(
+                url = "https://www.google.com",
+                src = "https://demos.creative-tim.com/argon-design-system/assets/img/theme/promo-1.png",
+                floating = FALSE,
+                card_mode = TRUE
+              )
+            )
+          )
+        ),
+        argonTabItem(
+          tabName = "badges",
+          fluidRow(
+            argonColumn(
+              width = 3,
+              argonBadge(
+                text = "My badge",
+                src = "https://www.google.com",
+                pill = TRUE,
+                status = "danger"
+              )
+            ),
+            argonColumn(
+              width = 3,
+              argonBadge(
+                text = "My badge",
+                src = "https://www.google.com",
+                pill = TRUE,
+                status = "primary"
+              )
+            ),
+            argonColumn(
+              width = 3,
+              argonBadge(
+                text = "My badge",
+                pill = TRUE,
+                status = "warning"
+              )
+            ),
+            argonColumn(
+              width = 3,
+              argonBadge(
+                text = "My badge",
+                src = "https://www.google.com",
+                pill = FALSE,
+                status = "success"
+              )
+            )
+          )
+        ),
+        argonTabItem(
+          tabName = "progress",
+          argonProgress(value = 10, status = "danger"),
+          argonProgress(value = 40, status = "info"),
+          argonProgress(value = 90, status = "warning")
+        ),
+        argonTabItem(
+          tabName = "profile",
+          fluidRow(
+            argonColumn(
+              width = 12,
+              argonProfile(
+                title = "John",
+                subtitle = "Japan, Kagoshima",
+                src = "https://demos.creative-tim.com/argon-design-system/assets/img/theme/team-1-800x800.jpg",
+                url = "https://www.google.com",
+                url_1 = "https://www.google.com",
+                url_2 = "https://www.google.com",
+                stats = argonProfileStats(
+                  argonProfileStat(
+                    value = 22,
+                    description = "Friends"
+                  ),
+                  argonProfileStat(
+                    value = 10,
+                    description = "Photos"
+                  ),
+                  argonProfileStat(
+                    value = 89,
+                    description = "Comments"
+                  )
                 ),
-                argonProfileStat(
-                  value = 10,
-                  description = "Photos"
-                ),
-                argonProfileStat(
-                  value = 89,
-                  description = "Comments"
-                )
-              ),
-              "An artist of considerable range, Ryan — 
-              the name taken by Melbourne-raised, 
-              Brooklyn-based Nick Murphy — writes, 
-              performs and records all of his own music, 
-              giving it a warm, intimate feel with a solid 
-              groove structure. An artist of considerable 
-              range."
+                "An artist of considerable range, Ryan — 
+                  the name taken by Melbourne-raised, 
+                  Brooklyn-based Nick Murphy — writes, 
+                  performs and records all of his own music, 
+                  giving it a warm, intimate feel with a solid 
+                  groove structure. An artist of considerable 
+                  range."
+              )
             )
           )
         )
