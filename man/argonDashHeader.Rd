@@ -5,7 +5,8 @@
 \title{Create a Boostrap 4 dashboard header}
 \usage{
 argonDashHeader(..., gradient = TRUE, color = NULL,
-  separator = FALSE, separator_color = "secondary")
+  separator = FALSE, separator_color = "secondary",
+  bottom_padding = 4, top_padding = 6)
 }
 \arguments{
 \item{...}{Any element}
@@ -17,6 +18,10 @@ argonDashHeader(..., gradient = TRUE, color = NULL,
 \item{separator}{Header bottom separator. FALSE by default.}
 
 \item{separator_color}{Separator color. "secondary" by default.}
+
+\item{bottom_padding}{Bottom padding. 4 by default.}
+
+\item{top_padding}{Bottom padding. 6 by default.}
 }
 \description{
 Build an argon dashboard header

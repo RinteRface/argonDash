@@ -3,9 +3,25 @@ library(argonR)
 library(argonDash)
 library(magrittr)
 
+tabText1 <- "Raw denim you probably haven't heard of them jean shorts Austin. 
+            Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache 
+            cliche tempor, williamsburg carles vegan helvetica. Reprehenderit 
+            butcher retro keffiyeh dreamcatcher synth. Raw denim you probably 
+            haven't heard of them jean shorts Austin. Nesciunt tofu stumptown 
+            aliqua, retro synth master cleanse"
+
+tabText2 <- "Cosby sweater eu banh mi, qui irure terry richardson ex squid. 
+            Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan 
+            american apparel, butcher voluptate nisi qui."
+
+tabText3 <- "Raw denim you probably haven't heard of them jean shorts Austin. 
+            Nesciunt tofu stumptown aliqua, retro synth master cleanse. 
+            Mustache cliche tempor, williamsburg carles vegan helvetica. 
+            Reprehenderit butcher retro keffiyeh dreamcatcher synth"
+
 shiny::shinyApp(
   ui = argonDashPage(
-    title = "test",
+    title = "Argon Dashboard Demo",
     author = "David",
     description = "Argon Dash Test",
     sidebar = argonDashSidebar(
@@ -149,52 +165,57 @@ shiny::shinyApp(
         argonTabItem(
           tabName = "cards",
           argonRow(
-            argonColumn(
-              width = 6,
-              argonCard(
-                width = 12,
-                src = "https://www.google.com",
-                icon = "ui-04",
-                status = "success",
-                shadow = TRUE,
-                border_level = 2,
-                hover_shadow = TRUE,
-                title = "Shiny Inputs",
-                sliderInput(
-                  "obs", 
-                  "Number of observations:",
-                  min = 0, 
-                  max = 1000, 
-                  value = 500
+            argonCard(
+              width = 12,
+              src = NULL,
+              icon = "ui-04",
+              status = "success",
+              shadow = TRUE,
+              border_level = 2,
+              hover_shadow = TRUE,
+              title = "Shiny Inputs",
+              argonRow(
+                argonColumn(
+                  width = 6,
+                  sliderInput(
+                    "obs", 
+                    "Number of observations:",
+                    min = 0, 
+                    max = 1000, 
+                    value = 500
+                  )
                 ),
-                plotOutput("distPlot")
+                argonColumn(width = 6, plotOutput("distPlot"))
               )
             ),
-            argonColumn(
-              width = 6,
-              argonCard(
-                width = 12,
-                title = "Argon Card",
-                src = "http://www.google.com",
-                hover_lift = TRUE,
-                shadow = TRUE,
-                shadow_size = NULL,
-                hover_shadow = FALSE,
-                border_level = 0,
-                icon = "atom",
-                status = "primary",
-                background_color = NULL,
-                gradient = FALSE, 
-                floating = FALSE,
-                radioButtons(
-                  "dist", 
-                  "Distribution type:",
-                  c("Normal" = "norm",
-                    "Uniform" = "unif",
-                    "Log-normal" = "lnorm",
-                    "Exponential" = "exp")
+            br(), br(),
+            argonCard(
+              width = 12,
+              title = "Argon Card",
+              src = NULL,
+              hover_lift = TRUE,
+              shadow = TRUE,
+              shadow_size = NULL,
+              hover_shadow = FALSE,
+              border_level = 0,
+              icon = "atom",
+              status = "primary",
+              background_color = NULL,
+              gradient = FALSE, 
+              floating = FALSE,
+              argonRow(
+                argonColumn(
+                  width = 6,
+                  radioButtons(
+                    "dist", 
+                    "Distribution type:",
+                    c("Normal" = "norm",
+                      "Uniform" = "unif",
+                      "Log-normal" = "lnorm",
+                      "Exponential" = "exp")
+                  )
                 ),
-                plotOutput("plot")
+                argonColumn(width = 6, plotOutput("plot"))
               )
             ) 
           ),
@@ -257,17 +278,17 @@ shiny::shinyApp(
               argonTab(
                 tabName = "Tab 1",
                 active = FALSE,
-                "Tab 1 content"
+                tabText1
               ),
               argonTab(
                 tabName = "Tab 2",
                 active = TRUE,
-                "Tab 2 content"
+                tabText2
               ),
               argonTab(
                 tabName = "Tab 3",
                 active = FALSE,
-                "Tab 3 content"
+                tabText3
               )
             ),
             argonTabSet(
@@ -279,17 +300,17 @@ shiny::shinyApp(
               argonTab(
                 tabName = "Tab 4",
                 active = FALSE,
-                "Tab 4 content"
+                tabText1
               ),
               argonTab(
                 tabName = "Tab 5",
                 active = TRUE,
-                "Tab 5 content"
+                tabText2
               ),
               argonTab(
                 tabName = "Tab 6",
                 active = FALSE,
-                "Tab 6 content"
+                tabText3
               )
             )
           )
@@ -445,6 +466,7 @@ shiny::shinyApp(
               )
             )
           ),
+          br(), br(),
           argonRow(
             argonColumn(
               width = 12,
@@ -501,6 +523,16 @@ shiny::shinyApp(
                 )
               )
             )
+          ),
+          argonRow(
+            argonColumn(
+              width = 6, 
+              argonImage(
+                src = "https://demos.creative-tim.com/argon-design-system/assets/img/ill/ill-2.svg",
+                floating = TRUE,
+                card_mode = TRUE
+              ) %>% argonPersp(side = "left")
+            )
           )
         ),
         argonTabItem(
@@ -510,25 +542,35 @@ shiny::shinyApp(
             color = "warning",
             separator = TRUE,
             separator_color = "info",
+            top_padding = 8,
+            bottom_padding = 8,
             argonCard(
               src = "https://www.google.com",
-              icon = "ui-04",
               status = "success",
-              #shadow = TRUE,
               border_level = 0,
-              #gradient = TRUE,
-              #background_color = "orange",
               hover_shadow = TRUE,
-              title = "Shiny Inputs"
-            )
+              title = "Card with Margins"
+            ) %>% argonMargin(orientation = "t", value = -150)
           ),
           argonDashHeader(
             gradient = FALSE,
             color = "info",
             separator = TRUE,
             separator_color = "secondary",
-            h1("Section Text"),
-            h3("Some text here")
+            top_padding = 8,
+            bottom_padding = 8,
+            argonRow(
+              argonColumn(
+                width = 6,
+                h1("Section Text"),
+                h3("Some text here"),
+                argonCard()
+              ),
+              argonColumn(
+                width = 6, 
+                argonCard() %>% argonMargin(orientation = "t", value = -200)
+              )
+            )
           )
         )
       )

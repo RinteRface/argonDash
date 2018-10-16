@@ -7,14 +7,17 @@
 #' @param color Header color. See \url{https://demos.creative-tim.com/argon-design-system/index.html}.
 #' @param separator Header bottom separator. FALSE by default.
 #' @param separator_color Separator color. "secondary" by default. 
-#' 
+#' @param bottom_padding Bottom padding. 4 by default.
+#' @param top_padding Bottom padding. 6 by default.
 #'
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @export
-argonDashHeader <- function(..., gradient = TRUE, color = NULL, separator = FALSE, separator_color = "secondary") {
+argonDashHeader <- function(..., gradient = TRUE, color = NULL, separator = FALSE, 
+                            separator_color = "secondary", bottom_padding = 4, 
+                            top_padding = 6) {
   
-  headerCl <- "header pb-8 pt-5 pt-md-8"
+  headerCl <- paste0("header pb-", bottom_padding, " pt-5 pt-md-", top_padding)
   if (gradient) {
     if (!is.null(color)) headerCl <- paste0(headerCl, " bg-gradient-", color)
   } else {
