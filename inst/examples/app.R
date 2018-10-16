@@ -426,9 +426,9 @@ shiny::shinyApp(
         ),
         argonTabItem(
           tabName = "progress",
-          argonProgress(value = 10, status = "danger"),
-          argonProgress(value = 40, status = "info"),
-          argonProgress(value = 90, status = "warning")
+          argonProgress(value = 10, status = "danger", text = "Custom Text"),
+          argonProgress(value = 40, status = "info", text = NULL),
+          argonProgress(value = 90, status = "warning", text = argonIcon("atom"))
         ),
         argonTabItem(
           tabName = "profile",
@@ -555,8 +555,6 @@ shiny::shinyApp(
           argonDashHeader(
             gradient = FALSE,
             color = "info",
-            separator = TRUE,
-            separator_color = "secondary",
             top_padding = 8,
             bottom_padding = 8,
             argonRow(
@@ -571,6 +569,17 @@ shiny::shinyApp(
                 argonCard() %>% argonMargin(orientation = "t", value = -200)
               )
             )
+          ),
+          argonDashHeader(
+            gradient = FALSE,
+            color = "secondary",
+            top_padding = 8,
+            bottom_padding = 8,
+            mask = TRUE,
+            background_img = "https://demos.creative-tim.com/argon-design-system/assets/img/theme/img-1-1200x1000.jpg",
+            opacity = 6,
+            argonH1("Header with mask", display = 1) %>% argonTextColor(color = "white"),
+            argonLead("This is the content.") %>% argonTextColor(color = "white")
           )
         )
       )

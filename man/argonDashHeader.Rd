@@ -6,7 +6,8 @@
 \usage{
 argonDashHeader(..., gradient = TRUE, color = NULL,
   separator = FALSE, separator_color = "secondary",
-  bottom_padding = 4, top_padding = 6)
+  bottom_padding = 4, top_padding = 6, background_img = NULL,
+  mask = FALSE, opacity = 8, height = 600)
 }
 \arguments{
 \item{...}{Any element}
@@ -22,6 +23,14 @@ argonDashHeader(..., gradient = TRUE, color = NULL,
 \item{bottom_padding}{Bottom padding. 4 by default.}
 
 \item{top_padding}{Bottom padding. 6 by default.}
+
+\item{background_img}{Background image url or path.}
+
+\item{mask}{Whether to add an opacity mask on the header. FALSE by default}
+
+\item{opacity}{Mask opacity. Between 0 and 8. Only if mask is TRUE.}
+
+\item{height}{Header height. 600px by default. Only if background image.}
 }
 \description{
 Build an argon dashboard header

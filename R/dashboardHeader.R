@@ -9,13 +9,18 @@
 #' @param separator_color Separator color. "secondary" by default. 
 #' @param bottom_padding Bottom padding. 4 by default.
 #' @param top_padding Bottom padding. 6 by default.
+#' @param background_img Background image url or path.
+#' @param mask Whether to add an opacity mask on the header. FALSE by default
+#' @param opacity Mask opacity. Between 0 and 8. Only if mask is TRUE.
+#' @param height Header height. 600px by default. Only if background image.
 #'
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @export
 argonDashHeader <- function(..., gradient = TRUE, color = NULL, separator = FALSE, 
                             separator_color = "secondary", bottom_padding = 4, 
-                            top_padding = 6) {
+                            top_padding = 6, background_img = NULL, mask = FALSE,
+                            opacity = 8, height = 600) {
   
   headerCl <- paste0("header pb-", bottom_padding, " pt-5 pt-md-", top_padding)
   if (gradient) {
@@ -24,10 +29,21 @@ argonDashHeader <- function(..., gradient = TRUE, color = NULL, separator = FALS
     if (!is.null(color)) headerCl <- paste0(headerCl, " bg-", color)
   }
   
+  style <- if (!is.null(background_img)) {
+    paste0("height: ", height, "px; 
+            background-image: url(", background_img,"); 
+           background-size: cover; 
+           background-position: center top;")
+  } else {
+    NULL
+  }
+  
   shiny::tags$div(
     class = headerCl,
+    style = style,
+    if (mask) htmltools::tags$span(class = paste0("mask bg-gradient-default opacity-", opacity)),
     shiny::tags$div(
-      class = "container-fluid",
+      class = "container-fluid align-items-center",
       shiny::tags$div(
         class = "header-body",
         ...
