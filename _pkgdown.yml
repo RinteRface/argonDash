@@ -21,6 +21,11 @@ reference:
   desc: Cards components ...
   contents:
   - '`argonInfoCard`'
+
+- title: Gallery
+  desc: argonDash Gallery
+  contents:
+  - '`argonDashGallery`'
   
 template:
   params:
@@ -49,9 +54,9 @@ navbar:
       href: news/index.html
     github:
       icon: fa-github fa-lg
-      href: https://github.com/RinteRface/argonR
+      href: https://github.com/RinteRface/argonDash
   
 
 news:
  releases:
- - text: "argonR 0.1.0.9000"
+ - text: "argonDash 0.1.0.9000"

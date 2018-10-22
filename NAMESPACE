@@ -2,6 +2,7 @@
 
 export(argonDashBody)
 export(argonDashFooter)
+export(argonDashGallery)
 export(argonDashHeader)
 export(argonDashNavbar)
 export(argonDashPage)

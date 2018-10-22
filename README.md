@@ -5,3 +5,25 @@
 [![Project Status](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
 
 > argon dashboard template
+
+## Installation
+
+```r
+devtools::install.packages("RinteRface/argonR")
+devtools::install.packages("RinteRface/argonDash")
+```
+
+## Demo
+
+See a demonstration [here](http://130.60.24.205/argonDash/):
+
+```r
+argonDashGallery()
+```
+
+<br>
+<a href="http://130.60.24.205/argonDash/" target="_blank"><img src="man/figures/argonDashDemo.png"></a>
+
+## Aknowledgements
+
+* Creative Tim for designing the original argon dashboard HTML template

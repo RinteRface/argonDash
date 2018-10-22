@@ -1,7 +1,7 @@
 Package: argonDash
 Type: Package
 Title: Argon Shiny Dashboard Template
-Version: 0.1.0
+Version: 0.1.0.9000
 Authors@R: c(
   person("David", "Granjon", email = "dgranjon@ymail.com", role = c("aut", "cre")),
   person(family = "Creative Tim", role = c("ctb", "cph"), comment = "Argon theme for Bootstrap 4"))
@@ -12,6 +12,7 @@ License: GPL-2
 Imports: shiny, 
     htmltools,
     argonR
+Suggests: magrittr
 Remotes: DivadNojnarg/argonR 
 URL: https://github.com/RinteRface/argonDash
 BugReports: https://github.com/RinteRface/argonDash/issues
