@@ -1,0 +1,57 @@
+reference:
+- title: Skeleton Functions
+  desc: Page main elements
+  contents: 
+  - '`argonDashBody`'
+  - '`argonDashFooter`'
+  - '`argonFooterItem`'
+  - '`argonFooterMenu`'
+  - '`argonDashHeader`'
+  - '`argonDashNavbar`'
+  - '`argonDashPage`'
+  - '`argonDashSidebar`'
+  - '`argonSidebarDivider`'
+  - '`argonSidebarHeader`'
+  - '`argonSidebarMenu`'
+  - '`argonSidebarItem`'
+  - '`argonTabItem`'
+  - '`argonTabItems`'
+  
+- title: Cards
+  desc: Cards components ...
+  contents:
+  - '`argonInfoCard`'
+  
+template:
+  params:
+    bootswatch: journal
+    
+    
+navbar:
+  structure:
+    left:
+    - home
+    - intro
+    - reference
+    - articles
+    - tutorials
+    - news
+    right: github
+  components:
+    home:
+      icon: fa-home fa-lg
+      href: index.html
+    reference:
+      text: Reference
+      href: reference/index.html
+    news:
+      text: Changelog
+      href: news/index.html
+    github:
+      icon: fa-github fa-lg
+      href: https://github.com/RinteRface/argonR
+  
+
+news:
+ releases:
+ - text: "argonR 0.1.0.9000"

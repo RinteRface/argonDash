@@ -11,8 +11,8 @@
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/journal/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -73,11 +73,26 @@
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Changelog
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Releases</li>
+    <li class="dropdown-header">argonR 0.1.0.9000</li>
+    <li class="divider"></li>
+    <li>
+      <a href="../news/index.html">Changelog</a>
+    </li>
+  </ul>
+</li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/RinteRface/argonDash">
+  <a href="https://github.com/RinteRface/argonR">
     <span class="fa fa-github fa-lg"></span>
      
   </a>
@@ -108,8 +123,8 @@
     <tbody>
       <tr>
         <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
+          <h2 id="section-skeleton-functions" class="hasAnchor"><a href="#section-skeleton-functions" class="anchor"></a>Skeleton Functions</h2>
+          <p class="section-desc"><p>Page main elements</p></p>
         </th>
       </tr>
       <tr>
@@ -124,6 +139,18 @@
           <p><code><a href="argonDashFooter.html">argonDashFooter()</a></code> </p>
         </td>
         <td><p>Create a Boostrap 4 dashboard footer</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="argonFooterItem.html">argonFooterItem()</a></code> </p>
+        </td>
+        <td><p>Create a Boostrap 4 dashboard footer menu item</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="argonFooterMenu.html">argonFooterMenu()</a></code> </p>
+        </td>
+        <td><p>Create a Boostrap 4 dashboard footer menu</p></td>
       </tr><tr>
         
         <td>
@@ -151,24 +178,6 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="argonFooterItem.html">argonFooterItem()</a></code> </p>
-        </td>
-        <td><p>Create a Boostrap 4 dashboard footer menu item</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="argonFooterMenu.html">argonFooterMenu()</a></code> </p>
-        </td>
-        <td><p>Create a Boostrap 4 dashboard footer menu</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="argonInfoCard.html">argonInfoCard()</a></code> </p>
-        </td>
-        <td><p>Create a Boostrap 4 dashboard info card</p></td>
-      </tr><tr>
-        
-        <td>
           <p><code><a href="argonSidebarDivider.html">argonSidebarDivider()</a></code> </p>
         </td>
         <td><p>A divider to put inside argonDashSidebar</p></td>
@@ -187,7 +196,7 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="argonSidebarMenuItem.html">argonSidebarMenuItem()</a></code> </p>
+          <p><code><a href="argonSidebarItem.html">argonSidebarItem()</a></code> </p>
         </td>
         <td><p>Create a Boostrap 4 argon sidebar menu</p></td>
       </tr><tr>
@@ -203,6 +212,20 @@
         </td>
         <td><p>A container for tab items</p></td>
       </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-cards" class="hasAnchor"><a href="#section-cards" class="anchor"></a>Cards</h2>
+          <p class="section-desc"><p>Cards components …</p></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="argonInfoCard.html">argonInfoCard()</a></code> </p>
+        </td>
+        <td><p>Create a Boostrap 4 dashboard info card</p></td>
+      </tr>
     </tbody>
     </table>
   </div>
@@ -210,7 +233,8 @@
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#section-skeleton-functions">Skeleton Functions</a></li>
+      <li><a href="#section-cards">Cards</a></li>
     </ul>
   </div>
 </div>

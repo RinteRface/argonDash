@@ -34,55 +34,55 @@ shiny::shinyApp(
       brand_url = "http://www.google.com",
       brand_logo = "https://demos.creative-tim.com/argon-design-system/assets/img/brand/blue.png",
       argonSidebarMenu(
-        argonSidebarMenuItem(
+        argonSidebarItem(
           tabName = "cards",
           icon = "tv-2",
           icon_color = "primary",
           "Cards"
         ),
-        argonSidebarMenuItem(
+        argonSidebarItem(
           tabName = "tabs",
           icon = "planet",
           icon_color = "warning",
           "Tabs"
         ),
-        argonSidebarMenuItem(
+        argonSidebarItem(
           tabName = "alerts",
           icon = "bullet-list-67",
           icon_color = "danger",
           "Alerts"
         ),
-        argonSidebarMenuItem(
+        argonSidebarItem(
           tabName = "images",
           icon = "circle-08",
           icon_color = "success",
           "Images"
         ),
-        argonSidebarMenuItem(
+        argonSidebarItem(
           tabName = "badges",
           icon = "ui-04",
           icon_color = "pink",
           "Badges"
         ),
-        argonSidebarMenuItem(
+        argonSidebarItem(
           tabName = "progress",
           icon = "pin-3",
           icon_color = "yellow",
           "Progress"
         ),
-        argonSidebarMenuItem(
+        argonSidebarItem(
           tabName = "profile",
           icon = "spaceship",
           icon_color = "info",
           "Profile"
         ),
-        argonSidebarMenuItem(
+        argonSidebarItem(
           tabName = "effects",
           icon = "atom",
           icon_color = "black",
           "CSS effects"
         ),
-        argonSidebarMenuItem(
+        argonSidebarItem(
           tabName = "sections",
           icon = "credit-card",
           icon_color = "grey",

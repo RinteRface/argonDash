@@ -10,7 +10,7 @@ argonDashSidebar(..., id, brand_url = NULL, brand_logo = NULL,
 }
 \arguments{
 \item{...}{Any element such as \link{argonDashSidebar}, \link{argonSidebarMenu},
-\link{argonSidebarMenuItem}, \link{argonSidebarHeader} and \link{argonSidebarDivider}.}
+\link{argonSidebarItem}, \link{argonSidebarHeader} and \link{argonSidebarDivider}.}
 
 \item{id}{Unique sidebar id.}
 

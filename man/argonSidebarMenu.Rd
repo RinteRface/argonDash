@@ -7,7 +7,7 @@
 argonSidebarMenu(...)
 }
 \arguments{
-\item{...}{Slot for \link{argonSidebarMenuItem}.}
+\item{...}{Slot for \link{argonSidebarItem}.}
 }
 \description{
 Build an argon dashboard main sidebar menu

@@ -3,7 +3,7 @@
 #' Build an argon dashboard sidebar
 #'
 #' @param ... Any element such as \link{argonDashSidebar}, \link{argonSidebarMenu},
-#' \link{argonSidebarMenuItem}, \link{argonSidebarHeader} and \link{argonSidebarDivider}.
+#' \link{argonSidebarItem}, \link{argonSidebarHeader} and \link{argonSidebarDivider}.
 #' 
 #' @param id Unique sidebar id.
 #' @param brand_url Sidebar brand url
@@ -104,7 +104,7 @@ argonDashSidebar <- function(..., id, brand_url = NULL, brand_logo = NULL,
 #'
 #' Build an argon dashboard main sidebar menu
 #'
-#' @param ... Slot for \link{argonSidebarMenuItem}.
+#' @param ... Slot for \link{argonSidebarItem}.
 #' 
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
@@ -135,7 +135,7 @@ argonSidebarMenu <- function(...) {
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @export
-argonSidebarMenuItem <- function(..., tabName = NULL, icon = NULL,
+argonSidebarItem <- function(..., tabName = NULL, icon = NULL,
                                  icon_color = NULL) {
   
   iconCl <- "ni"

@@ -30,7 +30,7 @@ argonTabItems <- function(...) {
 #' One tab to put inside a tab items container
 #'
 #' @param tabName The name of a tab. This must correspond to the \code{tabName}
-#'   of a \code{\link{argonSidebarMenuItem}}.
+#'   of a \code{\link{argonSidebarItem}}.
 #' @param ... Contents of the tab.
 #' 
 #' @export

@@ -8,7 +8,7 @@ argonTabItem(tabName = NULL, ...)
 }
 \arguments{
 \item{tabName}{The name of a tab. This must correspond to the \code{tabName}
-of a \code{\link{argonSidebarMenuItem}}.}
+of a \code{\link{argonSidebarItem}}.}
 
 \item{...}{Contents of the tab.}
 }
