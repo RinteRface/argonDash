@@ -9,8 +9,8 @@
 ## Installation
 
 ```r
-devtools::install.packages("RinteRface/argonR")
-devtools::install.packages("RinteRface/argonDash")
+devtools::install_github("RinteRface/argonR")
+devtools::install_github("RinteRface/argonDash")
 ```
 
 ## Demo
