@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>A header to put inside <a href='argonDashSidebar.html'>argonDashSidebar</a> — argonSidebarHeader • argonDash</title>
+<title>Create a Boostrap 4 dashboard dropdown menu — argonDropNav • argonDash</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="A header to put inside <a href='argonDashSidebar.html'>argonDashSidebar</a> — argonSidebarHeader" />
+<meta property="og:title" content="Create a Boostrap 4 dashboard dropdown menu — argonDropNav" />
 
-<meta property="og:description" content="A header to put inside argonDashSidebar" />
+<meta property="og:description" content="Build an argon dashboard dropdown menu" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -112,25 +112,37 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>A header to put inside <a href='argonDashSidebar.html'>argonDashSidebar</a></h1>
-    <small class="dont-index">Source: <a href='https://github.com/RinteRface/argonDash/blob/master/R/dashboardSidebar.R'><code>R/dashboardSidebar.R</code></a></small>
-    <div class="hidden name"><code>argonSidebarHeader.Rd</code></div>
+    <h1>Create a Boostrap 4 dashboard dropdown menu</h1>
+    <small class="dont-index">Source: <a href='https://github.com/RinteRface/argonDash/blob/master/R/dashboardNavbar.R'><code>R/dashboardNavbar.R</code></a></small>
+    <div class="hidden name"><code>argonDropNav.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>A header to put inside <a href='argonDashSidebar.html'>argonDashSidebar</a></p>
+    <p>Build an argon dashboard dropdown menu</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>argonSidebarHeader</span>(<span class='kw'>title</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'>argonDropNav</span>(<span class='no'>...</span>, <span class='kw'>title</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>src</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>orientation</span> <span class='kw'>=</span> <span class='st'>"right"</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
+      <th>...</th>
+      <td><p>slot for <a href='argonDropNavItem.html'>argonDropNavItem</a>, <a href='argonDropNavTitle.html'>argonDropNavTitle</a> or <a href='argonDropNavDivider.html'>argonDropNavDivider</a>.</p></td>
+    </tr>
+    <tr>
       <th>title</th>
-      <td><p>Header title</p></td>
+      <td><p>Menu title.</p></td>
+    </tr>
+    <tr>
+      <th>src</th>
+      <td><p>Menu image, if any.</p></td>
+    </tr>
+    <tr>
+      <th>orientation</th>
+      <td><p>Dropdown orientation: "left" or "right".</p></td>
     </tr>
     </table>
     
@@ -141,6 +153,10 @@
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
                 </ul>
+
+    <h2>Author</h2>
+    
+David Granjon, <a href='mailto:dgranjon@ymail.com'>dgranjon@ymail.com</a>
 
   </div>
 </div>

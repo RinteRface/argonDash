@@ -14,11 +14,11 @@ argonDashHeader(..., gradient = TRUE, color = NULL,
 
 \item{gradient}{Whether to apply a gradient effect. TRUE by default.}
 
-\item{color}{Header color. See \url{https://demos.creative-tim.com/argon-design-system/index.html}.}
+\item{color}{Header color. See \url{https://demos.creative-tim.com/argon-design-system/docs/foundation/colors.html}.}
 
 \item{separator}{Header bottom separator. FALSE by default.}
 
-\item{separator_color}{Separator color. "secondary" by default.}
+\item{separator_color}{Separator color. "secondary" by default. See \url{https://demos.creative-tim.com/argon-design-system/docs/foundation/colors.html}.}
 
 \item{bottom_padding}{Bottom padding. 4 by default.}
 

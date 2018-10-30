@@ -4,9 +4,9 @@
 #'
 #' @param ... Any element 
 #' @param gradient Whether to apply a gradient effect. TRUE by default.
-#' @param color Header color. See \url{https://demos.creative-tim.com/argon-design-system/index.html}.
+#' @param color Header color. See \url{https://demos.creative-tim.com/argon-design-system/docs/foundation/colors.html}.
 #' @param separator Header bottom separator. FALSE by default.
-#' @param separator_color Separator color. "secondary" by default. 
+#' @param separator_color Separator color. "secondary" by default. See \url{https://demos.creative-tim.com/argon-design-system/docs/foundation/colors.html}.
 #' @param bottom_padding Bottom padding. 4 by default.
 #' @param top_padding Bottom padding. 6 by default.
 #' @param background_img Background image url or path.

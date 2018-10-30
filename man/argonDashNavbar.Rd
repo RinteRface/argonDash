@@ -7,7 +7,7 @@
 argonDashNavbar(...)
 }
 \arguments{
-\item{...}{Any element such as}
+\item{...}{Any element such as \link{argonDropNav}.}
 }
 \description{
 Build an argon dashboard navbar

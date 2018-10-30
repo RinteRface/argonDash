@@ -26,7 +26,7 @@ argonDashSidebar(..., id, brand_url = NULL, brand_logo = NULL,
 
 \item{skin}{Sidebar skin. "light" by default.}
 
-\item{background}{Sidebar background color. See \url{https://demos.creative-tim.com/argon-design-system/index.html}.}
+\item{background}{Sidebar background color. See \url{https://demos.creative-tim.com/argon-design-system/docs/foundation/colors.html}.}
 }
 \description{
 Build an argon dashboard sidebar

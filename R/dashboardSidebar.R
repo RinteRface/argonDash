@@ -12,7 +12,7 @@
 #' @param side Sidebar side: "right" or "left". "left" by default.
 #' @param size Sidebar size: "s", "md", "lg". "md" by default.
 #' @param skin Sidebar skin. "light" by default.
-#' @param background Sidebar background color. See \url{https://demos.creative-tim.com/argon-design-system/index.html}.
+#' @param background Sidebar background color. See \url{https://demos.creative-tim.com/argon-design-system/docs/foundation/colors.html}.
 #'
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
