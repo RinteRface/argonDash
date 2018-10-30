@@ -33,6 +33,7 @@ shiny::shinyApp(
       id = "my_sidebar",
       brand_url = "http://www.google.com",
       brand_logo = "https://demos.creative-tim.com/argon-design-system/assets/img/brand/blue.png",
+      argonSidebarHeader(title = "Main Menu"),
       argonSidebarMenu(
         argonSidebarItem(
           tabName = "cards",
@@ -90,7 +91,7 @@ shiny::shinyApp(
         )
       ),
       argonSidebarDivider(),
-      argonSidebarHeader(title = "A header")
+      argonSidebarHeader(title = "Other Items")
     ),
     navbar = argonDashNavbar(
       argonDropNav(
@@ -252,6 +253,7 @@ shiny::shinyApp(
               circle = FALSE,
               size = "sm",
               width = 6,
+              iconList = list("atom", "atom", "atom"),
               argonTab(
                 tabName = "Tab 1",
                 active = FALSE,
@@ -484,31 +486,28 @@ shiny::shinyApp(
           argonRow(
             argonColumn(
               width = 6, 
-              h1("Perspective effect"),
-              h6("Disabled on small screens")
-            ),
-            argonColumn(
-              width = 6, 
-              argonPersp(
-                side = "right",
-                argonImage(
-                  url = "https://www.google.com",
-                  src = "https://demos.creative-tim.com/argon-design-system/assets/img/theme/promo-1.png",
-                  floating = TRUE,
-                  card_mode = TRUE,
-                  hover_lift = FALSE
-                )
-              )
-            )
-          ),
-          argonRow(
-            argonColumn(
-              width = 6, 
               argonImage(
                 src = "https://demos.creative-tim.com/argon-design-system/assets/img/ill/ill-2.svg",
                 floating = TRUE,
                 card_mode = TRUE
               ) %>% argonPersp(side = "left")
+            )
+          ) %>% argonPadding(orientation = "y", value = 5),
+          argonRow(
+            argonColumn(
+              width = 6, 
+              h1("Perspective effect"),
+              h6("Disabled on small screens")
+            ),
+            argonColumn(
+              width = 6, 
+              argonImage(
+                url = "https://www.google.com",
+                src = "https://demos.creative-tim.com/argon-design-system/assets/img/theme/promo-1.png",
+                floating = TRUE,
+                card_mode = TRUE,
+                hover_lift = FALSE
+              ) %>% argonPersp(side = "right")
             )
           )
         ),
