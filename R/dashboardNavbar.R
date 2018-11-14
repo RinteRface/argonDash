@@ -13,7 +13,7 @@ argonDashNavbar <- function(...) {
     id = "navbar-main",
     shiny::tags$div(
       class = "container-fluid",
-      shiny::tags$ul(class = "navbar-nav align-items-center", ...)
+      shiny::tags$ul(class = "navbar-nav align-items-center d-none d-md-flex", ...)
     )
   )
 } 

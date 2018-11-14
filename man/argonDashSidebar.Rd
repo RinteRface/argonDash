@@ -4,13 +4,16 @@
 \alias{argonDashSidebar}
 \title{Create a Boostrap 4 dashboard sidebar}
 \usage{
-argonDashSidebar(..., id, brand_url = NULL, brand_logo = NULL,
-  vertical = TRUE, side = c("left", "right"), size = c("s", "md",
-  "lg"), skin = c("light", "dark"), background = "white")
+argonDashSidebar(..., dropdownMenus = NULL, id, brand_url = NULL,
+  brand_logo = NULL, vertical = TRUE, side = c("left", "right"),
+  size = c("s", "md", "lg"), skin = c("light", "dark"),
+  background = "white")
 }
 \arguments{
 \item{...}{Any element such as \link{argonDashSidebar}, \link{argonSidebarMenu},
 \link{argonSidebarItem}, \link{argonSidebarHeader} and \link{argonSidebarDivider}.}
+
+\item{dropdownMenus}{Slot for dropdown menus. Not displayd on large screens.}
 
 \item{id}{Unique sidebar id.}
 

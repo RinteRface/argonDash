@@ -6,6 +6,7 @@
 #' \link{argonSidebarItem}, \link{argonSidebarHeader} and \link{argonSidebarDivider}.
 #' 
 #' @param id Unique sidebar id.
+#' @param dropdownMenus Slot for dropdown menus. Not displayd on large screens.
 #' @param brand_url Sidebar brand url
 #' @param brand_logo Sidebar brand logo
 #' @param vertical Whether to display the sidebar in vertical mode. TRUE by default.
@@ -17,7 +18,7 @@
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @export
-argonDashSidebar <- function(..., id, brand_url = NULL, brand_logo = NULL, 
+argonDashSidebar <- function(..., dropdownMenus = NULL, id, brand_url = NULL, brand_logo = NULL, 
                              vertical = TRUE, side = c("left", "right"), 
                              size = c("s", "md", "lg"), skin = c("light", "dark"), 
                              background = "white") {
@@ -60,6 +61,8 @@ argonDashSidebar <- function(..., id, brand_url = NULL, brand_logo = NULL,
         target = "_blank",
         shiny::img(class = "navbar-brand-img", src = brand_logo)
       ),
+      # Dropdown Menus
+      shiny::tags$ul(class = "navbar-nav align-items-center d-md-none", dropdownMenus),
       # Main content
       shiny::tags$div(
         class = "collapse navbar-collapse", 

@@ -123,9 +123,10 @@
     
     </div>
 
-    <pre class="usage"><span class='fu'>argonDashSidebar</span>(<span class='no'>...</span>, <span class='no'>id</span>, <span class='kw'>brand_url</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>brand_logo</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>vertical</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>side</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"left"</span>, <span class='st'>"right"</span>), <span class='kw'>size</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"s"</span>, <span class='st'>"md"</span>,
-  <span class='st'>"lg"</span>), <span class='kw'>skin</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"light"</span>, <span class='st'>"dark"</span>), <span class='kw'>background</span> <span class='kw'>=</span> <span class='st'>"white"</span>)</pre>
+    <pre class="usage"><span class='fu'>argonDashSidebar</span>(<span class='no'>...</span>, <span class='kw'>dropdownMenus</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>id</span>, <span class='kw'>brand_url</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>brand_logo</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>vertical</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>side</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"left"</span>, <span class='st'>"right"</span>),
+  <span class='kw'>size</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"s"</span>, <span class='st'>"md"</span>, <span class='st'>"lg"</span>), <span class='kw'>skin</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"light"</span>, <span class='st'>"dark"</span>),
+  <span class='kw'>background</span> <span class='kw'>=</span> <span class='st'>"white"</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -134,6 +135,10 @@
       <th>...</th>
       <td><p>Any element such as argonDashSidebar, <a href='argonSidebarMenu.html'>argonSidebarMenu</a>,
 <a href='argonSidebarItem.html'>argonSidebarItem</a>, <a href='argonSidebarHeader.html'>argonSidebarHeader</a> and <a href='argonSidebarDivider.html'>argonSidebarDivider</a>.</p></td>
+    </tr>
+    <tr>
+      <th>dropdownMenus</th>
+      <td><p>Slot for dropdown menus. Not displayd on large screens.</p></td>
     </tr>
     <tr>
       <th>id</th>
