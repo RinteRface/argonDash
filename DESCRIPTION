@@ -13,7 +13,7 @@ Imports: shiny,
     htmltools,
     argonR
 Suggests: magrittr
-Remotes: DivadNojnarg/argonR 
+Remotes: RinteRface/argonR 
 URL: https://github.com/RinteRface/argonDash
 BugReports: https://github.com/RinteRface/argonDash/issues
 Encoding: UTF-8
