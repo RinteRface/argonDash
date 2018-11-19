@@ -1,6 +1,7 @@
 # argonDash
 
 [![Travis build status](https://travis-ci.org/RinteRface/argonDash.svg?branch=master)](https://travis-ci.org/RinteRface/argonDash)
+[![CRAN status](https://www.r-pkg.org/badges/version/argonDash)](https://cran.r-project.org/package=argonDash)
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-ff69b4.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![Project Status](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
 
@@ -9,7 +10,7 @@
 ## Installation
 
 ```r
-devtools::install_github("RinteRface/argonR")
+install.packages("argonR")
 devtools::install_github("RinteRface/argonDash")
 ```
 
