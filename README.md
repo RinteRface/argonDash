@@ -16,14 +16,14 @@ devtools::install_github("RinteRface/argonDash")
 
 ## Demo
 
-See a demonstration [here](http://130.60.24.205/argonDash/):
+See a demonstration [here](https://rinterface.com/shiny/argonDash/):
 
 ```r
 argonDashGallery()
 ```
 
 <br>
-<a href="http://130.60.24.205/argonDash/" target="_blank"><img src="man/figures/argonDashDemo.png"></a>
+<a href="https://rinterface.com/shiny/argonDash/" target="_blank"><img src="man/figures/argonDashDemo.png"></a>
 
 ## Aknowledgements
 
