@@ -22,8 +22,13 @@ See a demonstration [here](https://rinterface.com/shiny/argonDash/):
 argonDashGallery()
 ```
 
+### vertical Sidebar Layout
 <br>
 <a href="https://rinterface.com/shiny/argonDash/" target="_blank"><img src="man/figures/argonDashDemo.png"></a>
+
+### Horizontal Sidebar Layout
+<br>
+<a href="https://rinterface.com/shiny/argonDash/" target="_blank"><img src="man/figures/argonDashDemo_horizontal.png"></a>
 
 ## Aknowledgements
 
