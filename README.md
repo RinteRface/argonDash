@@ -1,4 +1,4 @@
-# argonDash <img src="man/figures/argonDash_logo.png" width=200 align="right" />
+# argonDash <img src="http://www.rinterface.com/inst/images/argonDash.svg" width=200 align="right" />
 
 [![Travis build status](https://travis-ci.org/RinteRface/argonDash.svg?branch=master)](https://travis-ci.org/RinteRface/argonDash)
 [![CRAN status](https://www.r-pkg.org/badges/version/argonDash)](https://cran.r-project.org/package=argonDash)
