@@ -19,7 +19,8 @@ argonDashPage(title = NULL, description = NULL, author = NULL,
 
 \item{sidebar}{Bootstrap 4 dashboard main sidebar.}
 
-\item{header}{Bootstrap 4 dashboard control sidebar (right side).}
+\item{header}{Bootstrap 4 dashboard header (below the navbar). Useful to hightlight elements or
+print a message.}
 
 \item{body}{Bootstrap 4 dashboard body wrapper.}
 

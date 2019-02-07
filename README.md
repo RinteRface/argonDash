@@ -11,22 +11,28 @@
 
 ```r
 install.packages("argonR")
+# devel version
 devtools::install_github("RinteRface/argonDash")
+# from CRAN
+install.packages("argonDash")
 ```
 
 ## Demo
 
-See a demonstration [here](https://rinterface.com/shiny/argonDash/):
+See a demonstration on an open source shiny server [here](https://rinterface.com/shiny/argonDash/).
+In addition to free RStudio products, argonDash also runs on 
+[shinyapps.io](https://dgranjon.shinyapps.io/argonDashDemo/) and 
+[RStudio Connect](http://130.60.24.205:3939/argonDashDemo/), as well as on shiny server pro.
 
 ```r
 argonDashGallery()
 ```
 
-### vertical Sidebar Layout
+### Vertical layout
 <br>
 <a href="https://rinterface.com/shiny/argonDash/" target="_blank"><img src="man/figures/argonDashDemo.png"></a>
 
-### Horizontal Sidebar Layout
+### Horizontal layout
 <br>
 <a href="https://rinterface.com/shiny/argonDash/" target="_blank"><img src="man/figures/argonDashDemo_horizontal.png"></a>
 

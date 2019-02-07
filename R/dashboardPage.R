@@ -4,7 +4,8 @@
 #'
 #' @param navbar Bootstrap 4 dashboard navbar.
 #' @param sidebar Bootstrap 4 dashboard main sidebar.
-#' @param header Bootstrap 4 dashboard control sidebar (right side).
+#' @param header Bootstrap 4 dashboard header (below the navbar). Useful to hightlight elements or
+#' print a message.
 #' @param body Bootstrap 4 dashboard body wrapper.
 #' @param footer Bootstrap 4 dashboard footer.
 #' @param title App title.
