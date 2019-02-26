@@ -41,7 +41,9 @@ argonInfoCard <- function(value, title = NULL, stat = NULL, stat_icon = NULL,
     if (background_color == "default") text_color <- "text-white" else text_color <- NULL
   else text_color <- NULL
   
-  statCl <- if (stat > 0) "text-success mr-2" else "text-danger mr-2"
+  statCl <- if (!is.null(stat)) {
+    if (stat > 0) "text-success mr-2" else "text-danger mr-2" 
+  }
   
   infoCardTag <- shiny::tags$div(
     class = cardCl,
@@ -64,7 +66,7 @@ argonInfoCard <- function(value, title = NULL, stat = NULL, stat_icon = NULL,
       # lower part
       shiny::p(
         class = "mt-3 mb-0 text-sm",
-        shiny::span(class = statCl, shiny::icon(stat_icon), paste0(stat, "%")),
+        if (!is.null(stat)) shiny::span(class = statCl, shiny::icon(stat_icon), paste0(stat, "%")),
         shiny::span(class = paste0("h5 ", text_color), description)
       )
     )

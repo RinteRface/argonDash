@@ -7,6 +7,7 @@
 - Better documentation of `argonDashPage()`
 
 ## Minor improvement
+- fix issue in `argonInfoCard()` when stat is NULL
 - fix #3 thanks @noahbishop: when vertical is FALSE in the `argonDashSidebar`,
 navbar elements are horizontally displayed, as expected
 
