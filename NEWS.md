@@ -7,12 +7,13 @@
 - Better documentation of `argonDashPage()`
 
 ## Minor improvement
+- Fix #12: reduce vertical space between brand logo and menu items in `argonDashSidebar()`. Thanks @ShixiangWang
 - fix issue in `argonInfoCard()` when stat is NULL
-- fix #3 thanks @noahbishop: when vertical is FALSE in the `argonDashSidebar`,
+- fix #3 thanks @noahbishop: when vertical is FALSE in the `argonDashSidebar()`,
 navbar elements are horizontally displayed, as expected
 
 ## Bug fix
-- fix #2: `argonDropdown` correctly render in the navbar
+- fix #2: `argonDropdown()` correctly render in the navbar
 
 # argonDash 0.1.0
 - first release

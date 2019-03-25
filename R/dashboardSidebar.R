@@ -71,7 +71,7 @@ argonDashSidebar <- function(..., dropdownMenus = NULL, id, brand_url = NULL, br
       ),
       # Brand
       shiny::a(
-        class = "navbar-brand pt-0",
+        class = "navbar-brand pt-0 my-0",
         href = brand_url,
         target = "_blank",
         shiny::img(class = "navbar-brand-img", src = brand_logo)
@@ -80,7 +80,7 @@ argonDashSidebar <- function(..., dropdownMenus = NULL, id, brand_url = NULL, br
       shiny::tags$ul(class = "nav align-items-center d-md-none", dropdownMenus),
       # Main content
       shiny::tags$div(
-        class = "collapse navbar-collapse", 
+        class = "collapse navbar-collapse my--4", 
         id = "sidenav-collapse-main",
         # sidebar header when collapsed
         shiny::tags$div(
@@ -129,7 +129,7 @@ argonDashSidebar <- function(..., dropdownMenus = NULL, id, brand_url = NULL, br
 #' @export
 argonSidebarMenu <- function(...) {
   shiny::tags$div(
-    class = "nav-wrapper",
+    class = "nav-wrapper my--4",
     shiny::tags$div(
       class = "nav flex-column nav-pills", 
       `aria-orientation` = "vertical", 
