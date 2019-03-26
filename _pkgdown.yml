@@ -26,6 +26,15 @@ reference:
   contents:
   - '`argonInfoCard`'
 
+- title: Extras
+  desc: Extra elements
+  contents:
+  - '`argonAvatar`'
+  - '`argonAvatars`'
+  - '`argonTable`'
+  - '`argonTableItems`'
+  - '`argonTableItem`'
+
 - title: Gallery
   desc: argonDash Gallery
   contents:
