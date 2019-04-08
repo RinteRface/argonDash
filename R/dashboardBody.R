@@ -9,6 +9,7 @@
 #' @export
 argonDashBody <- function(...) {
   shiny::tags$div(
+    style = "min-height: 600px;",
     ...
   )
 }

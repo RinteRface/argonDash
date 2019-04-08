@@ -32,6 +32,9 @@ argonDashGallery()
 <a href="https://rinterface.com/shiny/argonDash/" target="_blank"><img src="man/figures/argonDashDemo.png"></a>
 
 ### Horizontal layout
+
+This layout is experimental.
+
 <br>
 <a href="https://rinterface.com/shiny/argonDash/" target="_blank"><img src="man/figures/argonDashDemo_horizontal.png"></a>
 
