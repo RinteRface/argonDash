@@ -77,7 +77,7 @@ argonDropNav <- function(..., title = NULL, src = NULL, orientation = "right") {
 #'
 #' @param title Item title.
 #' @param src External link.
-#' @param icon Icon name, if any.
+#' @param icon Icon, if any. Expect \link{argonIcon} or \link[shiny]{icon}. 
 #'
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
@@ -87,7 +87,7 @@ argonDropNavItem <- function(title = NULL, src = NULL, icon = NULL) {
     class = "dropdown-item",
     href = src,
     target = "_blank",
-    if (!is.null(icon)) argonR::argonIcon(name = icon),
+    if (!is.null(icon)) icon,
     shiny::tags$span(title)
   )
 }

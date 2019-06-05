@@ -4,16 +4,14 @@
 \alias{argonSidebarItem}
 \title{Create a Boostrap 4 argon sidebar menu}
 \usage{
-argonSidebarItem(..., tabName = NULL, icon = NULL, icon_color = NULL)
+argonSidebarItem(..., tabName = NULL, icon = NULL)
 }
 \arguments{
 \item{...}{Item name.}
 
 \item{tabName}{Should correspond exactly to the tabName given in \code{\link{argonTabItem}}.}
 
-\item{icon}{Item icon.}
-
-\item{icon_color}{Icon color.}
+\item{icon}{Item icon. \link{argonIcon} or \link[shiny]{icon}.}
 }
 \description{
 Build an argon dashboard main sidebar menu

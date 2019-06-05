@@ -41,74 +41,65 @@ shiny::shinyApp(
         argonDropNavItem(
           title = "Item 1", 
           src = "https://www.google.com", 
-          icon = "single-02"
+          icon = argonIcon("single-02")
         ),
         argonDropNavItem(
           title = "Item 2", 
           src = NULL, 
-          icon = "settings-gear-65"
+          icon = argonIcon("settings-gear-65")
         ),
         argonDropNavDivider(),
         argonDropNavItem(
           title = "Item 3", 
           src = "#", 
-          icon = "calendar-grid-58"
+          icon = argonIcon("calendar-grid-58")
         )
       ),
       argonSidebarHeader(title = "Main Menu"),
       argonSidebarMenu(
         argonSidebarItem(
           tabName = "cards",
-          icon = "tv-2",
-          icon_color = "primary",
+          icon = argonIcon(name = "tv-2", color = "primary"),
           "Cards"
         ),
         argonSidebarItem(
           tabName = "tabs",
-          icon = "planet",
-          icon_color = "warning",
+          icon = argonIcon(name = "planet", color = "warning"),
           "Tabs"
         ),
         argonSidebarItem(
           tabName = "alerts",
-          icon = "bullet-list-67",
-          icon_color = "danger",
+          icon = argonIcon(name = "bullet-list-67", color = "danger"),
           "Alerts"
         ),
         argonSidebarItem(
           tabName = "images",
-          icon = "circle-08",
-          icon_color = "success",
+          icon = argonIcon(name = "circle-08", color = "success"),
           "Images"
         ),
         argonSidebarItem(
           tabName = "badges",
-          icon = "ui-04",
-          icon_color = "pink",
+          icon = argonIcon(name = "ui-04", color = "pink"),
           "Badges"
         ),
         argonSidebarItem(
           tabName = "progress",
-          icon = "pin-3",
-          icon_color = "yellow",
+          icon = argonIcon(name = "pin-3", color = "yellow"),
           "Progress"
         ),
         argonSidebarItem(
           tabName = "profile",
-          icon = "spaceship",
-          icon_color = "info",
+          icon = argonIcon(name = "spaceship", color = "info"),
           "Profile"
         ),
         argonSidebarItem(
           tabName = "effects",
-          icon = "atom",
-          icon_color = "black",
+          icon = argonIcon(name = "atom", color = "black"),
           "CSS effects"
         ),
         argonSidebarItem(
           tabName = "sections",
-          icon = "credit-card",
-          icon_color = "grey",
+          icon = argonIcon(name = "credit-card", color = "grey"),
           "Sections"
         )
       ),
@@ -124,18 +115,18 @@ shiny::shinyApp(
         argonDropNavItem(
           title = "Item 1", 
           src = "https://www.google.com", 
-          icon = "single-02"
+          icon = argonIcon("single-02")
         ),
         argonDropNavItem(
           title = "Item 2", 
           src = NULL, 
-          icon = "settings-gear-65"
+          icon = argonIcon("settings-gear-65")
         ),
         argonDropNavDivider(),
         argonDropNavItem(
           title = "Item 3", 
           src = "#", 
-          icon = "calendar-grid-58"
+          icon = argonIcon("calendar-grid-58")
         )
       )
     ), 
@@ -152,7 +143,7 @@ shiny::shinyApp(
         shadow_size = NULL,
         hover_shadow = FALSE,
         border_level = 0,
-        icon = "atom",
+        icon = argonIcon("atom"),
         status = "primary",
         background_color = NULL,
         gradient = FALSE, 
@@ -168,7 +159,7 @@ shiny::shinyApp(
             argonCard(
               width = 12,
               src = NULL,
-              icon = "ui-04",
+              icon = icon("cogs"),
               status = "success",
               shadow = TRUE,
               border_level = 2,
@@ -198,7 +189,7 @@ shiny::shinyApp(
               shadow_size = NULL,
               hover_shadow = FALSE,
               border_level = 0,
-              icon = "atom",
+              icon = argonIcon("atom"),
               status = "primary",
               background_color = NULL,
               gradient = FALSE, 
@@ -225,9 +216,9 @@ shiny::shinyApp(
               value = "350,897", 
               title = "TRAFFIC", 
               stat = 3.48, 
-              stat_icon = "arrow-up",
+              stat_icon = icon("arrow-up"),
               description = "Since last month", 
-              icon = "chart-bar", 
+              icon = argonIcon("planet"), 
               icon_background = "danger",
               hover_lift = TRUE
             ),
@@ -235,9 +226,9 @@ shiny::shinyApp(
               value = "2,356", 
               title = "NEW USERS", 
               stat = -3.48, 
-              stat_icon = "arrow-down",
+              stat_icon = icon("arrow-down"),
               description = "Since last week", 
-              icon = "chart-pie", 
+              icon = icon("chart-pie"), 
               icon_background = "warning",
               shadow = TRUE
             ),
@@ -245,9 +236,9 @@ shiny::shinyApp(
               value = "924", 
               title = "SALES", 
               stat = -1.10, 
-              stat_icon = "arrow-down",
+              stat_icon = icon("arrow-down"),
               description = "Since yesterday", 
-              icon = "users", 
+              icon = icon("users"), 
               icon_background = "yellow",
               background_color = "default"
             ),
@@ -255,9 +246,9 @@ shiny::shinyApp(
               value = "49,65%", 
               title = "PERFORMANCE", 
               stat = 12, 
-              stat_icon = "arrow-up",
+              stat_icon = icon("arrow-up"),
               description = "Since last month", 
-              icon = "percent", 
+              icon = icon("percent"), 
               icon_background = "info",
               gradient = TRUE,
               background_color = "orange",
@@ -275,7 +266,7 @@ shiny::shinyApp(
               circle = FALSE,
               size = "sm",
               width = 6,
-              iconList = list("atom", "atom", "atom"),
+              iconList = lapply(X = 1:3, FUN = argonIcon, name = "atom"),
               argonTab(
                 tabName = "Tab 1",
                 active = FALSE,
@@ -322,7 +313,7 @@ shiny::shinyApp(
             argonColumn(
               width = 4,
               argonAlert(
-                icon = "basket",
+                icon = argonIcon("basket"),
                 status = "danger",
                 "This is an alert",
                 closable = TRUE
@@ -331,7 +322,7 @@ shiny::shinyApp(
             argonColumn(
               width = 4,
               argonAlert(
-                icon = "ui-02",
+                icon = icon("bars"),
                 status = "success",
                 "This is an alert",
                 closable = TRUE
@@ -340,7 +331,7 @@ shiny::shinyApp(
             argonColumn(
               width = 4,
               argonAlert(
-                icon = "ui-03",
+                icon = argonIcon("app", color = "white"),
                 status = "info",
                 "This is an alert",
                 closable = TRUE

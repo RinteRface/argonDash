@@ -18,5 +18,11 @@ navbar elements are horizontally displayed, as expected
 ## Bug fix
 - fix #2: `argonDropdown()` correctly render in the navbar
 
+## Breaking changes
+In order to enable user to choose between `shiny::icon()` and `argonR::argonIcon()`:
+- Change icon args of `argonDropNavItem()`, `argonSidebarItem()` and `argonInfoCard()`
+- remove icon_color arg from `argonSidebarItem()`
+- stat_icon arg of `argonInfoCard()` can use either `icon()` or `argonIcon()`
+
 # argonDash 0.1.0
 - first release

@@ -147,27 +147,19 @@ argonSidebarMenu <- function(...) {
 #'
 #' @param ... Item name.
 #' @param tabName Should correspond exactly to the tabName given in \code{\link{argonTabItem}}.
-#' @param icon Item icon. 
-#' @param icon_color Icon color.
+#' @param icon Item icon. \link{argonIcon} or \link[shiny]{icon}.
 #' 
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @export
-argonSidebarItem <- function(..., tabName = NULL, icon = NULL,
-                                 icon_color = NULL) {
-  
-  iconCl <- "ni"
-  if(!is.null(icon)) iconCl <- paste0(iconCl, " ni-", icon)
-  if(!is.null(icon_color)) iconCl <- paste0(iconCl, " text-", icon_color)
-  
-  
+argonSidebarItem <- function(..., tabName = NULL, icon = NULL) {
   shiny::tags$a(
     class = "nav-link mt-1 mb-1 mx-2 shadow",
     id = paste0("tab-", tabName),
     href = paste0("#shiny-tab-", tabName),
     `data-toggle` = "tab",
     `data-value` = tabName,
-    shiny::tags$i(class = iconCl),
+    icon,
     ...
   )
 }

@@ -5,9 +5,9 @@
 #' @param value info card value. 
 #' @param title info card title.
 #' @param stat info card stat value.
-#' @param stat_icon info card stat icon.
+#' @param stat_icon info card stat icon. Expect \link{argonIcon} or \link[shiny]{icon}.
 #' @param description info card stat description.
-#' @param icon info card icon.
+#' @param icon info card icon. Expect \link{argonIcon} or \link[shiny]{icon}. 
 #' @param icon_background info card icon background color.
 #' @param hover_lift Whether to apply a lift effect on hover. FALSE by default.
 #' Not compatible with floating.
@@ -59,14 +59,14 @@ argonInfoCard <- function(value, title = NULL, stat = NULL, stat_icon = NULL,
           class = "col-auto",
           shiny::tags$div(
             class = iconCl,
-            shiny::tags$i(class = paste0("fas fa-", icon))
+            icon
           )
         )
       ),
       # lower part
       shiny::p(
         class = "mt-3 mb-0 text-sm",
-        if (!is.null(stat)) shiny::span(class = statCl, shiny::icon(stat_icon), paste0(stat, "%")),
+        if (!is.null(stat)) shiny::span(class = statCl, stat_icon, paste0(stat, "%")),
         shiny::span(class = paste0("h5 ", text_color), description)
       )
     )
