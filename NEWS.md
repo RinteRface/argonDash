@@ -4,6 +4,7 @@
 - add support for shinyapps.io, RStudio connect and shiny server pro
 
 ## Documentation
+- revamp the gallery
 - Better documentation of `argonDashPage()`
 
 ## Minor improvement
