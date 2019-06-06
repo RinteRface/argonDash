@@ -35,6 +35,8 @@ alerts_tab <- argonTabItem(
   # Modals
   argonH1("Modals", display = 4),
   argonRow(
+    
+    # modal with gradient
     argonButton(
       name = "Click me!",
       status = "danger",
@@ -51,6 +53,45 @@ alerts_tab <- argonTabItem(
       "YOU SHOULD READ THIS!",
       br(),
       "A small river named Duden flows by their place and supplies it with the necessary regelialia."
+    ),
+    
+    # modal without gradient
+    argonButton(
+      name = "Click me!",
+      status = "warning",
+      icon = argonIcon("atom"),
+      size = "lg",
+      toggle_modal = TRUE,
+      modal_id = "modal2"
+    ),
+    argonModal(
+      id = "modal2",
+      title = "This is a modal without gradient",
+      status = "warning",
+      gradient = FALSE,
+      "YOU SHOULD READ THIS!",
+      br(),
+      "A small river named Duden flows by their place and supplies it with the necessary regelialia."
+    ),
+    
+    # Modal without status not gradient
+    argonButton(
+      name = "Click me!",
+      status = "info",
+      icon = argonIcon("atom"),
+      size = "lg",
+      toggle_modal = TRUE,
+      modal_id = "modal3"
+    ),
+    argonModal(
+      id = "modal3",
+      title = "This is a modal without gradient nor status",
+      status = NULL,
+      gradient = FALSE,
+      "YOU SHOULD READ THIS!",
+      br(),
+      "A small river named Duden flows by their place and supplies it with the necessary regelialia."
     )
+    
   )
 )

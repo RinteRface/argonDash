@@ -33,8 +33,13 @@ argonSidebar <- argonDashSidebar(
   argonSidebarMenu(
     argonSidebarItem(
       tabName = "cards",
-      icon = argonIcon(name = "tv-2", color = "primary"),
+      icon = argonIcon(name = "tv-2", color = "info"),
       "Cards"
+    ),
+    argonSidebarItem(
+      tabName = "tables",
+      icon = argonIcon(name = "tv-1", color = "green"),
+      "Tables"
     ),
     argonSidebarItem(
       tabName = "tabs",
@@ -47,14 +52,14 @@ argonSidebar <- argonDashSidebar(
       "Alerts"
     ),
     argonSidebarItem(
-      tabName = "images",
+      tabName = "medias",
       icon = argonIcon(name = "circle-08", color = "success"),
-      "Images"
+      "Medias"
     ),
     argonSidebarItem(
       tabName = "items",
       icon = argonIcon(name = "ui-04", color = "pink"),
-      "Badges"
+      "Other items"
     ),
     argonSidebarItem(
       tabName = "effects",

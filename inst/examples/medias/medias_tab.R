@@ -1,5 +1,7 @@
 images_tab <- argonTabItem(
-  tabName = "images",
+  tabName = "medias",
+  
+  # Images
   argonRow(
     argonColumn(
       width = 6,
