@@ -4,6 +4,8 @@
 [![CRAN status](https://www.r-pkg.org/badges/version/argonDash)](https://cran.r-project.org/package=argonDash)
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-ff69b4.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![Project Status](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
+[![cranlogs](https://cranlogs.r-pkg.org/badges/argonDash)](https://cran.r-project.org/package=argonDash)
+[![total](https://cranlogs.r-pkg.org/badges/grand-total/argonDash)](https://www.rpackages.io/package/argonDash)
 
 > argon dashboard template
 
