@@ -19,6 +19,7 @@ navbar elements are horizontally displayed, as expected
 ## Bug fix
 - fix #21: icon_background has a default value in `argonInfoCard()`. Thanks @tusharmajhi9
 - fix #20: Remove hardcoded stat parameter, leave it user defined. Thanks @mkaranja
+- fix #10: allow to programmatically set the value of 'stat' in the `argonInfoCard()`. Thanks @Patrikios 
 - fix #2: `argonDropdown()` correctly render in the navbar
 
 ## Breaking changes
