@@ -4,9 +4,16 @@
 \alias{argonDashPage}
 \title{Create a Boostrap 4 dashboard page}
 \usage{
-argonDashPage(title = NULL, description = NULL, author = NULL,
-  navbar = NULL, sidebar = NULL, header = NULL, body = NULL,
-  footer = NULL)
+argonDashPage(
+  title = NULL,
+  description = NULL,
+  author = NULL,
+  navbar = NULL,
+  sidebar = NULL,
+  header = NULL,
+  body = NULL,
+  footer = NULL
+)
 }
 \arguments{
 \item{title}{App title.}

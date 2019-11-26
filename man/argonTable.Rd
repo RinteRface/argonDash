@@ -4,8 +4,14 @@
 \alias{argonTable}
 \title{Create a Boostrap 4 table container}
 \usage{
-argonTable(..., cardWrap = FALSE, title = NULL, headTitles,
-  dark = FALSE, width = 12)
+argonTable(
+  ...,
+  cardWrap = FALSE,
+  title = NULL,
+  headTitles,
+  dark = FALSE,
+  width = 12
+)
 }
 \arguments{
 \item{...}{\link{argonTableItems}.}

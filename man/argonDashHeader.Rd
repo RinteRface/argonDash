@@ -4,10 +4,19 @@
 \alias{argonDashHeader}
 \title{Create a Boostrap 4 dashboard header}
 \usage{
-argonDashHeader(..., gradient = TRUE, color = NULL,
-  separator = FALSE, separator_color = "secondary",
-  bottom_padding = 4, top_padding = 6, background_img = NULL,
-  mask = FALSE, opacity = 8, height = 600)
+argonDashHeader(
+  ...,
+  gradient = TRUE,
+  color = NULL,
+  separator = FALSE,
+  separator_color = "secondary",
+  bottom_padding = 4,
+  top_padding = 6,
+  background_img = NULL,
+  mask = FALSE,
+  opacity = 8,
+  height = 600
+)
 }
 \arguments{
 \item{...}{Any element}

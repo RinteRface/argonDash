@@ -4,10 +4,20 @@
 \alias{argonInfoCard}
 \title{Create a Boostrap 4 dashboard info card}
 \usage{
-argonInfoCard(value, title = NULL, stat = NULL, stat_icon = NULL,
-  description = NULL, icon, icon_background = NULL,
-  hover_lift = FALSE, shadow = FALSE, background_color = NULL,
-  gradient = FALSE, width = 3)
+argonInfoCard(
+  value,
+  title = NULL,
+  stat = NULL,
+  stat_icon = NULL,
+  description = NULL,
+  icon,
+  icon_background = "default",
+  hover_lift = FALSE,
+  shadow = FALSE,
+  background_color = NULL,
+  gradient = FALSE,
+  width = 3
+)
 }
 \arguments{
 \item{value}{info card value.}

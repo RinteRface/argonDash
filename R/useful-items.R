@@ -21,7 +21,7 @@
 #'
 #' @export
 argonInfoCard <- function(value, title = NULL, stat = NULL, stat_icon = NULL, 
-                          description = NULL, icon, icon_background = NULL, 
+                          description = NULL, icon, icon_background = "default", 
                           hover_lift = FALSE, shadow = FALSE, 
                           background_color = NULL, gradient = FALSE, width = 3) {
   
