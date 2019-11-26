@@ -66,7 +66,7 @@ argonInfoCard <- function(value, title = NULL, stat = NULL, stat_icon = NULL,
       # lower part
       shiny::p(
         class = "mt-3 mb-0 text-sm",
-        if (!is.null(stat)) shiny::span(class = statCl, stat_icon, paste0(stat, "%")),
+        if (!is.null(stat)) shiny::span(class = statCl, stat_icon, stat),
         shiny::span(class = paste0("h5 ", text_color), description)
       )
     )
