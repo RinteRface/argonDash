@@ -5,3 +5,4 @@
 ^\_pkgdown\.yml$
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^revdep$
