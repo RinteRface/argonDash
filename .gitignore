@@ -4,3 +4,4 @@
 .Ruserdata
 *.dcf
 rsconnect/
+.DS_Store

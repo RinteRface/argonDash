@@ -1,4 +1,4 @@
-# argonDash 0.2.0.9000
+# argonDash 0.2.0
 
 ## Major Note 
 - add support for shinyapps.io, RStudio connect and shiny server pro
