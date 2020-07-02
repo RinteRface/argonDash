@@ -1,3 +1,9 @@
+# argonDash 0.3.0.9000
+
+## Bug fix
+- Fix issue in `argonDashGallery()`
+
+
 # argonDash 0.2.0
 
 ## Major Note 
@@ -9,8 +15,8 @@
 
 ## Minor improvement
 - add min-height to body
-- add `argonTable()`, `argonTableItems` and `argonTableItem`
-- add `argonAvatars()` and `argonAvatar` 
+- add `argonTable()`, `argonTableItems()` and `argonTableItem()`
+- add `argonAvatars()` and `argonAvatar()` 
 - Fix #12: reduce vertical space between brand logo and menu items in `argonDashSidebar()`. Thanks @ShixiangWang
 - fix issue in `argonInfoCard()` when stat is NULL
 - fix #3 thanks @noahbishop: when vertical is FALSE in the `argonDashSidebar()`,

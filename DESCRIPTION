@@ -1,7 +1,7 @@
 Package: argonDash
 Type: Package
 Title: Argon Shiny Dashboard Template
-Version: 0.2.0
+Version: 0.3.0.9000
 Authors@R: c(
   person("David", "Granjon", email = "dgranjon@ymail.com", role = c("aut", "cre")),
   person(family = "RinteRface", role = "cph"),

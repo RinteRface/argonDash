@@ -16,7 +16,7 @@ argonDashGallery <- function() { # nocov start
   
   shiny::shinyAppFile(
     system.file(
-      paste0("examples/app.R"), 
+      paste0("examples/gallery/app.R"), 
       package = 'argonDash', 
       mustWork = TRUE
     )
