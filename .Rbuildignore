@@ -9,3 +9,5 @@
 ^\.vscode$
 ^\.github$
 ^CODE_OF_CONDUCT\.md$
+^_pkgdown\.yml$
+^pkgdown$
