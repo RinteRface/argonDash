@@ -6,9 +6,11 @@
 [![cranlogs](https://cranlogs.r-pkg.org/badges/argonDash)](https://cran.r-project.org/package=argonDash)
 [![total](https://cranlogs.r-pkg.org/badges/grand-total/argonDash)](https://www.rpackages.io/package/argonDash)
 
-> argon dashboard template
+> argon Bootstrap4 dashboard template for Shiny
 
 ## Installation
+
+`{argonDash}` requires to install `{argonR}`.
 
 ```r
 install.packages("argonR")
@@ -20,28 +22,28 @@ install.packages("argonDash")
 
 ## Demo
 
-See a demonstration on an open source shiny server [here](https://rinterface.com/shiny/argonDash/).
-In addition to free RStudio products, argonDash also runs on 
-[shinyapps.io](https://dgranjon.shinyapps.io/argonDashDemo/) and RStudio Connect, as well as on shiny server pro.
+See a demonstration on 
+[shinyapps.io](https://dgranjon.shinyapps.io/argonDashDemo/).
 
 ```r
+library(argonDash)
 argonDashGallery()
 ```
 
 ### Vertical layout
 <br>
-<a href="https://rinterface.com/shiny/argonDash/" target="_blank"><img src="man/figures/argonDashDemo.png"></a>
+<img src="man/figures/argonDashDemo.png">
 
 ### Horizontal layout
 
 This layout is experimental.
 
 <br>
-<a href="https://rinterface.com/shiny/argonDash/" target="_blank"><img src="man/figures/argonDashDemo_horizontal.png"></a>
+<img src="man/figures/argonDashDemo_horizontal.png">
 
 ## Aknowledgement
 
-* Creative Tim for designing the original argon dashboard HTML template
+* [Creative Tim](https://www.creative-tim.com/) for designing the original argon dashboard HTML template.
 
 ## Code of Conduct
   
