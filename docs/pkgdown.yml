@@ -1,6 +1,8 @@
-pandoc: 2.14.0.3
-pkgdown: 1.6.1
+pandoc: '3.2'
+pkgdown: 2.1.0
 pkgdown_sha: ~
 articles: {}
-last_built: 2021-11-15T13:17Z
-
+last_built: 2025-01-25T21:36Z
+urls:
+  reference: https://rinterface.github.io/argonDash/reference
+  article: https://rinterface.github.io/argonDash/articles

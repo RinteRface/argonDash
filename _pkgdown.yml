@@ -41,10 +41,8 @@ reference:
   - '`argonDashGallery`'
   
 template:
-  params:
-    bootswatch: journal
-    
-    
+  bootstrap: 5
+
 navbar:
   structure:
     left:
@@ -69,8 +67,10 @@ navbar:
       icon: fa-github fa-lg
       href: https://github.com/RinteRface/argonDash
   
+url: https://rinterface.github.io/argonDash/
 
 news:
  releases:
+ - text: "argonDash 0.3.0.9000"
  - text: "argonDash 0.2.0"
  - text: "argonDash 0.1.0"
