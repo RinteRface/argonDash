@@ -22,9 +22,6 @@ install.packages("argonDash")
 
 ## Demo
 
-See a demonstration on 
-[shinyapps.io](https://dgranjon.shinyapps.io/argonDashDemo/).
-
 ```r
 library(argonDash)
 argonDashGallery()
