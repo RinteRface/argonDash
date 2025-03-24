@@ -20,7 +20,7 @@ argonTable(
 
 \item{title}{Card title if any.}
 
-\item{headTitles}{Table header names. Must have the same length as the number of 
+\item{headTitles}{Table header names. Must have the same length as the number of
 \link{argonTableItem} in \link{argonTableItems}. Set "" to have an empty title field.}
 
 \item{dark}{Whether to enable dark mode. FALSE by default.}
@@ -37,9 +37,9 @@ if (interactive()) {
  library(argonDash)
  shinyApp(
   ui = argonDashPage(
-    navbar = argonDashNavbar(), 
-    sidebar = argonDashSidebar(id = "mysidebar"), 
-    header = argonDashHeader(), 
+    navbar = argonDashNavbar(),
+    sidebar = argonDashSidebar(id = "mysidebar"),
+    header = argonDashHeader(),
     body = argonDashBody(
      argonTable(
       headTitles = c(
@@ -54,7 +54,7 @@ if (interactive()) {
        argonTableItem("Argon Design System"),
        argonTableItem(dataCell = TRUE, "$2,500 USD"),
        argonTableItem(
-        dataCell = TRUE, 
+        dataCell = TRUE,
         argonBadge(
          text = "Pending",
          status = "danger"
@@ -67,7 +67,7 @@ if (interactive()) {
          )
        ),
        argonTableItem(
-        dataCell = TRUE, 
+        dataCell = TRUE,
         argonProgress(value = 60, status = "danger")
        ),
        argonTableItem(
@@ -80,7 +80,7 @@ if (interactive()) {
        )
       )
      )
-    ), 
+    ),
     footer = argonDashFooter()
   ),
   server = function(input, output) { }

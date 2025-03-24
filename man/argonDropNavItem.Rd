@@ -11,7 +11,7 @@ argonDropNavItem(title = NULL, src = NULL, icon = NULL)
 
 \item{src}{External link.}
 
-\item{icon}{Icon, if any. Expect \link{argonIcon} or \link[shiny]{icon}.}
+\item{icon}{Icon, if any. Expect \link[argonR]{argonIcon} or \link[shiny]{icon}.}
 }
 \description{
 Build an argon dashboard dropdown menu item

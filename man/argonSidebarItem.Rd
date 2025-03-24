@@ -11,7 +11,7 @@ argonSidebarItem(..., tabName = NULL, icon = NULL)
 
 \item{tabName}{Should correspond exactly to the tabName given in \code{\link{argonTabItem}}.}
 
-\item{icon}{Item icon. \link{argonIcon} or \link[shiny]{icon}.}
+\item{icon}{Item icon. \link[argonR]{argonIcon} or \link[shiny]{icon}.}
 }
 \description{
 Build an argon dashboard main sidebar menu

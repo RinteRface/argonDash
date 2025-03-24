@@ -26,11 +26,11 @@ argonInfoCard(
 
 \item{stat}{info card stat value.}
 
-\item{stat_icon}{info card stat icon. Expect \link{argonIcon} or \link[shiny]{icon}.}
+\item{stat_icon}{info card stat icon. Expect \link[argonR]{argonIcon} or \link[shiny]{icon}.}
 
 \item{description}{info card stat description.}
 
-\item{icon}{info card icon. Expect \link{argonIcon} or \link[shiny]{icon}.}
+\item{icon}{info card icon. Expect \link[argonR]{argonIcon} or \link[shiny]{icon}.}
 
 \item{icon_background}{info card icon background color.}
 

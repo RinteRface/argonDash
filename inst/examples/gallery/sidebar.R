@@ -6,26 +6,26 @@ argonSidebar <- argonDashSidebar(
   side = "left",
   id = "my_sidebar",
   brand_url = "http://www.google.com",
-  brand_logo = "https://demos.creative-tim.com/argon-design-system/assets/img/brand/blue.png",
+  brand_logo = "https://demos.creative-tim.com/argon-dashboard-bs4/assets/img/theme/team-4.jpg",
   dropdownMenus = argonDropNav(
-    title = "Dropdown Menu", 
-    src = "https://demos.creative-tim.com/argon-dashboard/assets/img/theme/team-4-800x800.jpg", 
+    title = "Dropdown Menu",
+    src = "https://demos.creative-tim.com/argon-dashboard-bs4/assets/img/theme/team-4.jpg",
     orientation = "right",
     argonDropNavTitle(title = "Welcome!"),
     argonDropNavItem(
-      title = "Item 1", 
-      src = "https://www.google.com", 
+      title = "Item 1",
+      src = "https://www.google.com",
       icon = argonIcon("single-02")
     ),
     argonDropNavItem(
-      title = "Item 2", 
-      src = NULL, 
+      title = "Item 2",
+      src = NULL,
       icon = argonIcon("settings-gear-65")
     ),
     argonDropNavDivider(),
     argonDropNavItem(
-      title = "Item 3", 
-      src = "#", 
+      title = "Item 3",
+      src = "#",
       icon = argonIcon("calendar-grid-58")
     )
   ),

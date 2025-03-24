@@ -4,7 +4,7 @@
 #'
 #' @param ... Any element such as \link{argonDashSidebar}, \link{argonSidebarMenu},
 #' \link{argonSidebarItem}, \link{argonSidebarHeader} and \link{argonSidebarDivider}.
-#' 
+#'
 #' @param id Unique sidebar id.
 #' @param dropdownMenus Slot for dropdown menus. Not displayd on large screens.
 #' @param brand_url Sidebar brand url
@@ -18,15 +18,22 @@
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @export
-argonDashSidebar <- function(..., dropdownMenus = NULL, id, brand_url = NULL, brand_logo = NULL, 
-                             vertical = TRUE, side = c("left", "right"), 
-                             size = c("s", "md", "lg"), skin = c("light", "dark"), 
-                             background = "white") {
-  
+argonDashSidebar <- function(
+  ...,
+  dropdownMenus = NULL,
+  id,
+  brand_url = NULL,
+  brand_logo = NULL,
+  vertical = TRUE,
+  side = c("left", "right"),
+  size = c("s", "md", "lg"),
+  skin = c("light", "dark"),
+  background = "white"
+) {
   side <- match.arg(side)
   size <- match.arg(size)
   skin <- match.arg(skin)
-  
+
   sidebarCl <- "navbar"
   if (vertical) {
     sidebarCl <- paste0(sidebarCl, " navbar-vertical")
@@ -37,22 +44,21 @@ argonDashSidebar <- function(..., dropdownMenus = NULL, id, brand_url = NULL, br
   if (!is.null(size)) sidebarCl <- paste0(sidebarCl, " navbar-expand-", size)
   if (!is.null(skin)) sidebarCl <- paste0(sidebarCl, " navbar-", skin)
   if (!is.null(background)) sidebarCl <- paste0(sidebarCl, " bg-", background)
-  
-  
+
   # handle horizontal items
-  # if vertical is FALSE, we need to modify 
+  # if vertical is FALSE, we need to modify
   # ... class to nav instead of nav flex-column
   # so that items are displayed on the same line
   items <- list(...)
   if (!vertical) {
     for (i in seq_along(items)) {
       if (items[[i]]$attribs[["class"]] == "nav-wrapper") {
-        items[[i]]$children[[1]]$attribs$class <- "nav" 
-        items[[i]]$children[[1]]$attribs[["aria-orientation"]] <- "horizontal" 
+        items[[i]]$children[[1]]$attribs$class <- "nav"
+        items[[i]]$children[[1]]$attribs[["aria-orientation"]] <- "horizontal"
       }
     }
   }
-  
+
   shiny::tags$nav(
     class = sidebarCl,
     id = id,
@@ -80,7 +86,7 @@ argonDashSidebar <- function(..., dropdownMenus = NULL, id, brand_url = NULL, br
       shiny::tags$ul(class = "nav align-items-center d-md-none", dropdownMenus),
       # Main content
       shiny::tags$div(
-        class = "collapse navbar-collapse my--4", 
+        class = "collapse navbar-collapse my--4",
         id = "sidenav-collapse-main",
         # sidebar header when collapsed
         shiny::tags$div(
@@ -91,7 +97,7 @@ argonDashSidebar <- function(..., dropdownMenus = NULL, id, brand_url = NULL, br
               shiny::a(
                 href = brand_url,
                 target = "_blank",
-                shiny::img(class = "navbar-brand-img", src = brand_logo) 
+                shiny::img(class = "navbar-brand-img", src = brand_logo)
               )
             ),
             shiny::tags$div(
@@ -117,13 +123,12 @@ argonDashSidebar <- function(..., dropdownMenus = NULL, id, brand_url = NULL, br
 }
 
 
-
 #' Create a Boostrap 4 argon sidebar menu
 #'
 #' Build an argon dashboard main sidebar menu
 #'
 #' @param ... Slot for \link{argonSidebarItem}.
-#' 
+#'
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @export
@@ -131,14 +136,13 @@ argonSidebarMenu <- function(...) {
   shiny::tags$div(
     class = "nav-wrapper my--4",
     shiny::tags$div(
-      class = "nav flex-column nav-pills", 
-      `aria-orientation` = "vertical", 
+      class = "nav flex-column nav-pills",
+      `aria-orientation` = "vertical",
       id = "sidebar-menu",
       ...
     )
   )
 }
-
 
 
 #' Create a Boostrap 4 argon sidebar menu
@@ -147,8 +151,8 @@ argonSidebarMenu <- function(...) {
 #'
 #' @param ... Item name.
 #' @param tabName Should correspond exactly to the tabName given in \code{\link{argonTabItem}}.
-#' @param icon Item icon. \link{argonIcon} or \link[shiny]{icon}.
-#' 
+#' @param icon Item icon. \link[argonR]{argonIcon} or \link[shiny]{icon}.
+#'
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @export
@@ -165,9 +169,8 @@ argonSidebarItem <- function(..., tabName = NULL, icon = NULL) {
 }
 
 
-
 #' A header to put inside \link{argonDashSidebar}
-#' 
+#'
 #' @param title Header title
 #'
 #' @export

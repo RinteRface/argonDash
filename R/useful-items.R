@@ -2,12 +2,12 @@
 #'
 #' Build an argon dashboard info card
 #'
-#' @param value info card value. 
+#' @param value info card value.
 #' @param title info card title.
 #' @param stat info card stat value.
-#' @param stat_icon info card stat icon. Expect \link{argonIcon} or \link[shiny]{icon}.
+#' @param stat_icon info card stat icon. Expect \link[argonR]{argonIcon} or \link[shiny]{icon}.
 #' @param description info card stat description.
-#' @param icon info card icon. Expect \link{argonIcon} or \link[shiny]{icon}. 
+#' @param icon info card icon. Expect \link[argonR]{argonIcon} or \link[shiny]{icon}.
 #' @param icon_background info card icon background color.
 #' @param hover_lift Whether to apply a lift effect on hover. FALSE by default.
 #' Not compatible with floating.
@@ -15,32 +15,44 @@
 #' @param background_color Card background color. NULL by default.
 #' @param gradient Whether to apply a gradient effect on the card background. FALSE by default.
 #' @param width info card width. Between 1 and 12.
-#' 
+#'
 #'
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @export
-argonInfoCard <- function(value, title = NULL, stat = NULL, stat_icon = NULL, 
-                          description = NULL, icon, icon_background = "default", 
-                          hover_lift = FALSE, shadow = FALSE, 
-                          background_color = NULL, gradient = FALSE, width = 3) {
-  
+argonInfoCard <- function(
+  value,
+  title = NULL,
+  stat = NULL,
+  stat_icon = NULL,
+  description = NULL,
+  icon,
+  icon_background = "default",
+  hover_lift = FALSE,
+  shadow = FALSE,
+  background_color = NULL,
+  gradient = FALSE,
+  width = 3
+) {
   iconCl <- "icon icon-shape text-white rounded-circle shadow"
-  if (!is.null(icon_background)) iconCl <- paste0(iconCl, " bg-", icon_background)
-  
+  if (!is.null(icon_background))
+    iconCl <- paste0(iconCl, " bg-", icon_background)
+
   cardCl <- "card card-stats mb-4 mb-xl-0"
   if (hover_lift) cardCl <- paste0(cardCl, " card-lift--hover")
   if (shadow) cardCl <- paste0(cardCl, " shadow")
   if (gradient) {
-    if (!is.null(background_color)) cardCl <- paste0(cardCl, " bg-gradient-", background_color)
+    if (!is.null(background_color))
+      cardCl <- paste0(cardCl, " bg-gradient-", background_color)
   } else {
-    if (!is.null(background_color)) cardCl <- paste0(cardCl, " bg-", background_color)
+    if (!is.null(background_color))
+      cardCl <- paste0(cardCl, " bg-", background_color)
   }
-  
+
   if (!is.null(background_color))
-    if (background_color == "default") text_color <- "text-white" else text_color <- NULL
-  else text_color <- NULL
-  
+    if (background_color == "default") text_color <- "text-white" else
+      text_color <- NULL else text_color <- NULL
+
   infoCardTag <- shiny::tags$div(
     class = cardCl,
     shiny::tags$div(
@@ -48,8 +60,14 @@ argonInfoCard <- function(value, title = NULL, stat = NULL, stat_icon = NULL,
       # upper part
       shiny::fluidRow(
         argonR::argonColumn(
-          shiny::tags$h5(class = paste0("card-title text-uppercase mb-0 ", text_color), title),
-          shiny::span(class = paste0("h2 font-weight-bold mb-0 ", text_color), value)
+          shiny::tags$h5(
+            class = paste0("card-title text-uppercase mb-0 ", text_color),
+            title
+          ),
+          shiny::span(
+            class = paste0("h2 font-weight-bold mb-0 ", text_color),
+            value
+          )
         ),
         shiny::tags$div(
           class = "col-auto",
@@ -72,12 +90,9 @@ argonInfoCard <- function(value, title = NULL, stat = NULL, stat_icon = NULL,
       )
     )
   )
-  
+
   argonR::argonColumn(width = width, infoCardTag)
-  
 }
-
-
 
 
 #' Create a Boostrap 4 table container
@@ -87,11 +102,11 @@ argonInfoCard <- function(value, title = NULL, stat = NULL, stat_icon = NULL,
 #' @param ... \link{argonTableItems}.
 #' @param cardWrap Whether to wrap the table in a card. FALSE by default.
 #' @param title Card title if any.
-#' @param headTitles Table header names. Must have the same length as the number of 
+#' @param headTitles Table header names. Must have the same length as the number of
 #' \link{argonTableItem} in \link{argonTableItems}. Set "" to have an empty title field.
 #' @param dark Whether to enable dark mode. FALSE by default.
 #' @param width Table width. 12 by default.
-#' 
+#'
 #' @examples
 #' if (interactive()) {
 #'  library(shiny)
@@ -99,9 +114,9 @@ argonInfoCard <- function(value, title = NULL, stat = NULL, stat_icon = NULL,
 #'  library(argonDash)
 #'  shinyApp(
 #'   ui = argonDashPage(
-#'     navbar = argonDashNavbar(), 
-#'     sidebar = argonDashSidebar(id = "mysidebar"), 
-#'     header = argonDashHeader(), 
+#'     navbar = argonDashNavbar(),
+#'     sidebar = argonDashSidebar(id = "mysidebar"),
+#'     header = argonDashHeader(),
 #'     body = argonDashBody(
 #'      argonTable(
 #'       headTitles = c(
@@ -116,7 +131,7 @@ argonInfoCard <- function(value, title = NULL, stat = NULL, stat_icon = NULL,
 #'        argonTableItem("Argon Design System"),
 #'        argonTableItem(dataCell = TRUE, "$2,500 USD"),
 #'        argonTableItem(
-#'         dataCell = TRUE, 
+#'         dataCell = TRUE,
 #'         argonBadge(
 #'          text = "Pending",
 #'          status = "danger"
@@ -129,7 +144,7 @@ argonInfoCard <- function(value, title = NULL, stat = NULL, stat_icon = NULL,
 #'          )
 #'        ),
 #'        argonTableItem(
-#'         dataCell = TRUE, 
+#'         dataCell = TRUE,
 #'         argonProgress(value = 60, status = "danger")
 #'        ),
 #'        argonTableItem(
@@ -142,19 +157,25 @@ argonInfoCard <- function(value, title = NULL, stat = NULL, stat_icon = NULL,
 #'        )
 #'       )
 #'      )
-#'     ), 
+#'     ),
 #'     footer = argonDashFooter()
 #'   ),
 #'   server = function(input, output) { }
 #'  )
 #' }
-#' 
+#'
 #'
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @export
-argonTable <- function(..., cardWrap = FALSE, title = NULL, headTitles, dark = FALSE, width = 12) {
-  
+argonTable <- function(
+  ...,
+  cardWrap = FALSE,
+  title = NULL,
+  headTitles,
+  dark = FALSE,
+  width = 12
+) {
   # handle theme
   if (dark) {
     headCl <- "thead-dark"
@@ -165,18 +186,21 @@ argonTable <- function(..., cardWrap = FALSE, title = NULL, headTitles, dark = F
     tableCl <- "table align-items-center table-flush"
     wrapperCl <- "card shadow"
   }
-  
+
   # column headers
   tableHead <- shiny::tags$thead(
     class = headCl,
     shiny::tags$tr(
-      lapply(seq_along(headTitles), function(i) shiny::tags$th(scope = "col", headTitles[[i]])) 
+      lapply(
+        seq_along(headTitles),
+        function(i) shiny::tags$th(scope = "col", headTitles[[i]])
+      )
     )
   )
-  
+
   # body rows
   tableBody <- shiny::tags$tbody(...)
-  
+
   # table tag
   tableTag <- shiny::tags$div(
     class = "table-responsive",
@@ -186,7 +210,7 @@ argonTable <- function(..., cardWrap = FALSE, title = NULL, headTitles, dark = F
       tableBody
     )
   )
-  
+
   # card wrapper or not
   if (cardWrap) {
     wrapper <- argonR::argonColumn(
@@ -195,20 +219,19 @@ argonTable <- function(..., cardWrap = FALSE, title = NULL, headTitles, dark = F
       shiny::tags$div(
         class = wrapperCl,
         shiny::tags$div(
-          class = if (dark) "card-header bg-transparent border-0" else "card-header border-0",
+          class = if (dark) "card-header bg-transparent border-0" else
+            "card-header border-0",
           shiny::tags$h3(class = if (dark) "mb-0" else "text-white mb-0", title)
         ),
         tableTag
       )
     )
-    
+
     return(wrapper)
   } else {
     return(tableTag)
   }
 }
-
-
 
 
 #' Create a Boostrap 4 table item row
@@ -223,7 +246,6 @@ argonTable <- function(..., cardWrap = FALSE, title = NULL, headTitles, dark = F
 argonTableItems <- function(...) {
   shiny::tags$tr(...)
 }
-
 
 
 #' Create a Boostrap 4 table item
@@ -243,8 +265,6 @@ argonTableItem <- function(..., dataCell = FALSE) {
     shiny::tags$th(...)
   }
 }
-
-
 
 
 #' Create a Boostrap 4 avatar container
@@ -273,10 +293,9 @@ argonAvatars <- function(...) {
 #'
 #' @export
 argonAvatar <- function(src, toolTip = NULL, size = c("sm", "md", "lg")) {
-  
   size <- match.arg(size)
   avatarCl <- paste0("avatar avatar-", size)
-  
+
   shiny::tags$a(
     href = NULL,
     class = avatarCl,
@@ -284,6 +303,7 @@ argonAvatar <- function(src, toolTip = NULL, size = c("sm", "md", "lg")) {
     `data-original-title` = toolTip,
     shiny::tags$img(
       src = src,
-      class = "rounded-circle")
+      class = "rounded-circle"
+    )
   )
 }

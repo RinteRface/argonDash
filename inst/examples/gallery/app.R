@@ -26,7 +26,7 @@ shiny::shinyApp(
     author = "David",
     description = "Argon Dash Test",
     sidebar = argonSidebar,
-    navbar = argonNav, 
+    navbar = argonNav,
     header = argonHeader,
     body = argonDashBody(
       argonTabItems(
@@ -46,7 +46,7 @@ shiny::shinyApp(
     output$distPlot <- renderPlot({
       hist(rnorm(input$obs))
     })
-    
+
     output$plot <- renderPlot({
       dist <- switch(
         input$dist,
@@ -56,15 +56,14 @@ shiny::shinyApp(
         exp = rexp,
         rnorm
       )
-      
+
       hist(dist(500))
     })
-    
+
     # argonTable
     output$argonTable <- renderUI({
-      
       wrap <- if (input$cardWrap == "Enable") TRUE else FALSE
-      
+
       argonTable(
         cardWrap = wrap,
         headTitles = c(
@@ -79,7 +78,7 @@ shiny::shinyApp(
           argonTableItem("Argon Design System"),
           argonTableItem(dataCell = TRUE, "$2,500 USD"),
           argonTableItem(
-            dataCell = TRUE, 
+            dataCell = TRUE,
             argonBadge(
               text = "Pending",
               status = "danger"
@@ -88,11 +87,11 @@ shiny::shinyApp(
           argonTableItem(
             argonAvatar(
               size = "sm",
-              src = "https://image.flaticon.com/icons/svg/219/219976.svg"
+              src = "https://demos.creative-tim.com/argon-dashboard-bs4/assets/img/theme/team-4.jpg"
             )
           ),
           argonTableItem(
-            dataCell = TRUE, 
+            dataCell = TRUE,
             argonProgress(value = 60, status = "danger")
           ),
           argonTableItem(
@@ -106,6 +105,5 @@ shiny::shinyApp(
         )
       )
     })
-    
   }
 )

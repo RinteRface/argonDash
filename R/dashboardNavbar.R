@@ -13,11 +13,13 @@ argonDashNavbar <- function(...) {
     id = "navbar-main",
     shiny::tags$div(
       class = "container-fluid",
-      shiny::tags$ul(class = "navbar-nav align-items-center d-none d-md-flex", ...)
+      shiny::tags$ul(
+        class = "navbar-nav align-items-center d-none d-md-flex",
+        ...
+      )
     )
   )
-} 
-
+}
 
 
 #' Create a Boostrap 4 dashboard dropdown menu
@@ -33,7 +35,6 @@ argonDashNavbar <- function(...) {
 #'
 #' @export
 argonDropNav <- function(..., title = NULL, src = NULL, orientation = "right") {
-  
   # image
   itemImg <- shiny::tags$a(
     class = "nav-link pr-0",
@@ -49,18 +50,21 @@ argonDropNav <- function(..., title = NULL, src = NULL, orientation = "right") {
         shiny::tags$img(src = src)
       ),
       shiny::tags$div(
-        class="media-body ml-2 d-none d-lg-block",
+        class = "media-body ml-2 d-none d-lg-block",
         shiny::tags$span(class = "mb-0 text-sm  font-weight-bold", title)
       )
     )
   )
-  
+
   # dropdown menu
   dropdownTag <- shiny::tags$div(
-    class = paste0("dropdown-menu dropdown-menu-arrow dropdown-menu-", orientation),
+    class = paste0(
+      "dropdown-menu dropdown-menu-arrow dropdown-menu-",
+      orientation
+    ),
     ...
   )
-  
+
   # main tag
   shiny::tags$li(
     class = "nav-item dropdown",
@@ -70,14 +74,13 @@ argonDropNav <- function(..., title = NULL, src = NULL, orientation = "right") {
 }
 
 
-
 #' Create a Boostrap 4 dashboard dropdown menu item
 #'
 #' Build an argon dashboard dropdown menu item
 #'
 #' @param title Item title.
 #' @param src External link.
-#' @param icon Icon, if any. Expect \link{argonIcon} or \link[shiny]{icon}. 
+#' @param icon Icon, if any. Expect \link[argonR]{argonIcon} or \link[shiny]{icon}.
 #'
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
@@ -91,7 +94,6 @@ argonDropNavItem <- function(title = NULL, src = NULL, icon = NULL) {
     shiny::tags$span(title)
   )
 }
-
 
 
 #' Create a Boostrap 4 dashboard dropdown menu title
@@ -109,7 +111,6 @@ argonDropNavTitle <- function(title = NULL) {
     shiny::tags$h6(class = "text-overflow m-0", title)
   )
 }
-
 
 
 #' Create a Boostrap 4 dashboard dropdown menu divider
