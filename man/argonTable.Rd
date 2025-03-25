@@ -63,7 +63,7 @@ if (interactive()) {
        argonTableItem(
         argonAvatar(
          size = "sm",
-         src = "https://image.flaticon.com/icons/svg/219/219976.svg"
+         src = "images/undraw_profile-pic_fatv.svg"
          )
        ),
        argonTableItem(

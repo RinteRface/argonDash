@@ -6,10 +6,10 @@ argonSidebar <- argonDashSidebar(
   side = "left",
   id = "my_sidebar",
   brand_url = "http://www.google.com",
-  brand_logo = "https://demos.creative-tim.com/argon-dashboard-bs4/assets/img/theme/team-4.jpg",
+  brand_logo = "https://demos.creative-tim.com/argon-dashboard-bs4/assets/img/brand/blue.png",
   dropdownMenus = argonDropNav(
     title = "Dropdown Menu",
-    src = "https://demos.creative-tim.com/argon-dashboard-bs4/assets/img/theme/team-4.jpg",
+    src = "images/undraw_profile-pic_fatv.svg",
     orientation = "right",
     argonDropNavTitle(title = "Welcome!"),
     argonDropNavItem(

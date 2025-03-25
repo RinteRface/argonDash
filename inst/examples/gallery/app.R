@@ -87,7 +87,7 @@ shiny::shinyApp(
           argonTableItem(
             argonAvatar(
               size = "sm",
-              src = "https://demos.creative-tim.com/argon-dashboard-bs4/assets/img/theme/team-4.jpg"
+              src = "images/undraw_profile-pic_fatv.svg"
             )
           ),
           argonTableItem(

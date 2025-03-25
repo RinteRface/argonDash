@@ -42,6 +42,15 @@ library(argonDash)
 argonDashGallery()
 ```
 
+We provide some placeholder images served in the `images` folder, so you just have to do this to access them:
+
+```r
+argonAvatar(
+  size = "sm",
+  src = "images/undraw_profile-pic_fatv.svg"
+)
+```
+
 ### Vertical layout
 <br>
 <img src="man/figures/argonDashDemo.png">

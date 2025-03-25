@@ -1,7 +1,7 @@
 argonNav <- argonDashNavbar(
   argonDropNav(
     title = "Dropdown Menu",
-    src = "https://demos.creative-tim.com/argon-dashboard-bs4/assets/img/theme/team-4.jpg",
+    src = "images/undraw_profile-pic_fatv.svg",
     orientation = "right",
     argonDropNavTitle(title = "Welcome!"),
     argonDropNavItem(

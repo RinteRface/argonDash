@@ -7,7 +7,7 @@ images_tab <- argonTabItem(
       width = 6,
       argonImage(
         url = "https://www.google.com",
-        src = "https://demos.creative-tim.com/argon-dashboard-bs4/assets/img/theme/team-4.jpg",
+        src = "images/undraw_profile-pic_fatv.svg",
         floating = FALSE,
         card_mode = TRUE
       )
@@ -16,7 +16,7 @@ images_tab <- argonTabItem(
       width = 6,
       argonImage(
         url = "https://www.google.com",
-        src = "https://demos.creative-tim.com/argon-dashboard-bs4/assets/img/theme/team-4.jpg",
+        src = "images/undraw_profile-pic_fatv.svg",
         floating = TRUE,
         card_mode = FALSE
       )
@@ -27,11 +27,11 @@ images_tab <- argonTabItem(
     argonCarousel(
       id = "carousel1",
       argonCarouselItem(
-        src = "https://demos.creative-tim.com/argon-dashboard-bs4/assets/img/theme/team-4.jpg",
+        src = "images/undraw_profile-pic_fatv.svg",
         active = TRUE
       ),
       argonCarouselItem(
-        src = "https://demos.creative-tim.com/argon-dashboard-bs4/assets/img/theme/team-4.jpg",
+        src = "images/undraw_profile-pic_fatv.svg",
         active = FALSE
       )
     ) %>%

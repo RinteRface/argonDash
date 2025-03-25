@@ -13,7 +13,8 @@ sections_tab <- argonTabItem(
       border_level = 0,
       hover_shadow = TRUE,
       title = "Card with Margins"
-    ) %>% argonMargin(orientation = "t", value = -150)
+    ) %>%
+      argonMargin(orientation = "t", value = -150)
   ),
   argonDashHeader(
     gradient = FALSE,
@@ -28,7 +29,7 @@ sections_tab <- argonTabItem(
         argonCard()
       ),
       argonColumn(
-        width = 6, 
+        width = 6,
         argonCard() %>% argonMargin(orientation = "t", value = -200)
       )
     )
@@ -39,9 +40,10 @@ sections_tab <- argonTabItem(
     top_padding = 8,
     bottom_padding = 8,
     mask = TRUE,
-    background_img = "https://demos.creative-tim.com/argon-design-system/assets/img/theme/img-1-1200x1000.jpg",
+    background_img = "images/undraw_quiet-street_v45k.png",
     opacity = 6,
-    argonH1("Header with mask", display = 1) %>% argonTextColor(color = "white"),
+    argonH1("Header with mask", display = 1) %>%
+      argonTextColor(color = "white"),
     argonLead("This is the content.") %>% argonTextColor(color = "white")
   )
 )

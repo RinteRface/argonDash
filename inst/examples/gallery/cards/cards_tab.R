@@ -118,7 +118,7 @@ cards_tab <- argonTabItem(
       argonUser(
         title = "Ryan Tompson",
         subtitle = "Web Developer",
-        src = "https://demos.creative-tim.com/argon-dashboard-bs4/assets/img/theme/team-4.jpg"
+        src = "images/undraw_profile-pic_fatv.svg"
       )
     ),
     argonColumn(
@@ -126,7 +126,7 @@ cards_tab <- argonTabItem(
       argonUser(
         title = "Romina Hadid",
         subtitle = "Marketing Strategist",
-        src = "https://demos.creative-tim.com/argon-dashboard-bs4/assets/img/theme/team-4.jpg"
+        src = "images/undraw_profile-pic_fatv.svg"
       )
     ),
     argonColumn(
@@ -134,7 +134,7 @@ cards_tab <- argonTabItem(
       argonUser(
         title = "Alexander Smith",
         subtitle = "UI/UX Designer",
-        src = "https://demos.creative-tim.com/argon-dashboard-bs4/assets/img/theme/team-4.jpg"
+        src = "images/undraw_profile-pic_fatv.svg"
       )
     ),
     argonColumn(
@@ -142,7 +142,7 @@ cards_tab <- argonTabItem(
       argonUser(
         title = "John Doe",
         subtitle = "Founder and CEO",
-        src = "https://demos.creative-tim.com/argon-dashboard-bs4/assets/img/theme/team-4.jpg"
+        src = "images/undraw_profile-pic_fatv.svg"
       )
     )
   ),
@@ -156,7 +156,7 @@ cards_tab <- argonTabItem(
       argonProfile(
         title = "John",
         subtitle = "Japan, Kagoshima",
-        src = "https://demos.creative-tim.com/argon-dashboard-bs4/assets/img/theme/team-4.jpg",
+        src = "images/undraw_profile-pic_fatv.svg",
         url = "https://www.google.com",
         url_1 = "https://www.google.com",
         url_2 = "https://www.google.com",

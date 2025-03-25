@@ -60,7 +60,7 @@ items_tab <- argonTabItem(
       argonAvatar(
         toolTip = avatarTooltips[i],
         size = avatarSizes[i],
-        src = "https://demos.creative-tim.com/argon-dashboard-bs4/assets/img/theme/team-4.jpg"
+        src = "images/undraw_profile-pic_fatv.svg"
       )
     })
   )
