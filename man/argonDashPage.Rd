@@ -12,7 +12,8 @@ argonDashPage(
   sidebar = NULL,
   header = NULL,
   body = NULL,
-  footer = NULL
+  footer = NULL,
+  dark = TRUE
 )
 }
 \arguments{

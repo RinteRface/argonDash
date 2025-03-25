@@ -26,9 +26,17 @@
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @export
-argonDashPage <- function(title = NULL, description = NULL, author = NULL, 
-                          navbar = NULL, sidebar = NULL, header = NULL, body = NULL, footer = NULL){
-  
+argonDashPage <- function(
+  title = NULL,
+  description = NULL,
+  author = NULL,
+  navbar = NULL,
+  sidebar = NULL,
+  header = NULL,
+  body = NULL,
+  footer = NULL,
+  dark = TRUE
+) {
   shiny::tags$html(
     # Head
     shiny::tags$head(
@@ -44,14 +52,15 @@ argonDashPage <- function(title = NULL, description = NULL, author = NULL,
     # Body
     addDeps(
       shiny::tags$body(
+        class = paste("g-sidenav-show bg-gray-100", if (dark) "dark-version"),
+        header,
         sidebar,
-        shiny::tags$div(
-          class = "main-content",
+        shiny::tags$main(
+          class = "main-content position-relative border-radius-lg ",
           navbar,
-          header,
           # page content
           shiny::tags$div(
-            class = "container-fluid mt--1",
+            class = "container-fluid py-4",
             body,
             footer
           )

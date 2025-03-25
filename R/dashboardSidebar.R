@@ -9,11 +9,9 @@
 #' @param dropdownMenus Slot for dropdown menus. Not displayd on large screens.
 #' @param brand_url Sidebar brand url
 #' @param brand_logo Sidebar brand logo
-#' @param vertical Whether to display the sidebar in vertical mode. TRUE by default.
-#' @param side Sidebar side: "right" or "left". "left" by default.
 #' @param size Sidebar size: "s", "md", "lg". "md" by default.
 #' @param skin Sidebar skin. "light" by default.
-#' @param background Sidebar background color. See \url{https://demos.creative-tim.com/argon-design-system/docs/foundation/colors.html}.
+#' @param color Links color.
 #'
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
@@ -24,100 +22,47 @@ argonDashSidebar <- function(
   id,
   brand_url = NULL,
   brand_logo = NULL,
-  vertical = TRUE,
-  side = c("left", "right"),
-  size = c("s", "md", "lg"),
-  skin = c("light", "dark"),
-  background = "white"
+  side = c("start", "end"),
+  skin = c("default", "white"),
+  color = c("primary", "dark", "info", "success", "warning", "danger")
 ) {
   side <- match.arg(side)
-  size <- match.arg(size)
   skin <- match.arg(skin)
+  color <- match.arg(color)
 
-  sidebarCl <- "navbar"
-  if (vertical) {
-    sidebarCl <- paste0(sidebarCl, " navbar-vertical")
-  } else {
-    sidebarCl <- paste0(sidebarCl, " navbar-horizontal")
-  }
+  sidebarCl <- "sidenav navbar navbar-vertical navbar-expand-xs border-radius-xl my-3 ms-4"
   if (!is.null(side)) sidebarCl <- paste0(sidebarCl, " fixed-", side)
-  if (!is.null(size)) sidebarCl <- paste0(sidebarCl, " navbar-expand-", size)
-  if (!is.null(skin)) sidebarCl <- paste0(sidebarCl, " navbar-", skin)
-  if (!is.null(background)) sidebarCl <- paste0(sidebarCl, " bg-", background)
+  if (!is.null(skin)) sidebarCl <- paste0(sidebarCl, " bg-", skin)
 
-  # handle horizontal items
-  # if vertical is FALSE, we need to modify
-  # ... class to nav instead of nav flex-column
-  # so that items are displayed on the same line
   items <- list(...)
-  if (!vertical) {
-    for (i in seq_along(items)) {
-      if (items[[i]]$attribs[["class"]] == "nav-wrapper") {
-        items[[i]]$children[[1]]$attribs$class <- "nav"
-        items[[i]]$children[[1]]$attribs[["aria-orientation"]] <- "horizontal"
-      }
-    }
-  }
+  items <- htmltools::tagQuery(items)$find(".nav-link")$addAttrs(
+    class = sprintf("bg-gradient-%s", color)
+  )$allTags()
 
-  shiny::tags$nav(
+  shiny::tags$aside(
     class = sidebarCl,
     id = id,
-    shiny::tags$div(
-      class = "container-fluid",
-      # sidebar trigger
-      shiny::tags$button(
-        `aria-control` = id,
-        `aria-expanded` = "false",
-        `aria-label` = "Toggle navigation",
-        class = "navbar-toggler collapsed",
-        `data-target` = "#sidenav-collapse-main",
-        `data-toggle` = "collapse",
-        type = "button",
-        shiny::tags$span(class = "navbar-toggler-icon")
-      ),
-      # Brand
+    # Brand
+    div(
+      class = "sidenav-header",
       shiny::a(
-        class = "navbar-brand pt-0 my-0",
+        class = "navbar-brand m-0",
         href = brand_url,
         target = "_blank",
-        shiny::img(class = "navbar-brand-img", src = brand_logo)
+        shiny::img(class = "navbar-brand-img h-100", src = brand_logo)
       ),
-      # Dropdown Menus
-      shiny::tags$ul(class = "nav align-items-center d-md-none", dropdownMenus),
-      # Main content
-      shiny::tags$div(
-        class = "collapse navbar-collapse my--4",
-        id = "sidenav-collapse-main",
-        # sidebar header when collapsed
-        shiny::tags$div(
-          class = "navbar-collapse-header d-md-none",
-          shiny::fluidRow(
-            shiny::tags$div(
-              class = "col-6 collapse-brand",
-              shiny::a(
-                href = brand_url,
-                target = "_blank",
-                shiny::img(class = "navbar-brand-img", src = brand_logo)
-              )
-            ),
-            shiny::tags$div(
-              class = "col-6 collapse-close",
-              shiny::tags$button(
-                `aria-control` = id,
-                `aria-expanded` = "true",
-                `aria-label` = "Toggle sidenav",
-                class = "navbar-toggler",
-                `data-target` = "#sidenav-collapse-main",
-                `data-toggle` = "collapse",
-                type = "button",
-                shiny::tags$span(),
-                shiny::tags$span()
-              )
-            )
-          )
-        ),
-        items
-      )
+    ),
+    argonSidebarDivider(),
+    # Main content
+    shiny::tags$div(
+      class = "collapse navbar-collapse w-auto",
+      id = "sidenav-collapse-main",
+      argonSidebarMenu(items)
+    ),
+    # Footer
+    div(
+      class = "sidenav-footer mx-3",
+      "Sidebar footer"
     )
   )
 }
@@ -133,14 +78,9 @@ argonDashSidebar <- function(
 #'
 #' @export
 argonSidebarMenu <- function(...) {
-  shiny::tags$div(
-    class = "nav-wrapper my--4",
-    shiny::tags$div(
-      class = "nav flex-column nav-pills",
-      `aria-orientation` = "vertical",
-      id = "sidebar-menu",
-      ...
-    )
+  shiny::tags$ul(
+    class = "navbar-nav",
+    ...
   )
 }
 
@@ -157,14 +97,20 @@ argonSidebarMenu <- function(...) {
 #'
 #' @export
 argonSidebarItem <- function(..., tabName = NULL, icon = NULL) {
-  shiny::tags$a(
-    class = "nav-link mt-1 mb-1 mx-2 shadow",
-    id = paste0("tab-", tabName),
-    href = paste0("#shiny-tab-", tabName),
-    `data-toggle` = "tab",
-    `data-value` = tabName,
-    icon,
-    ...
+  tags$li(
+    class = "nav-item",
+    shiny::tags$a(
+      class = "nav-link",
+      id = paste0("tab-", tabName),
+      href = paste0("#shiny-tab-", tabName),
+      `data-bs-toggle` = "tab",
+      `data-value` = tabName,
+      div(
+        class = "icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center",
+        icon
+      ),
+      span(class = "nav-link-text ms-1", ...)
+    )
   )
 }
 
@@ -174,8 +120,14 @@ argonSidebarItem <- function(..., tabName = NULL, icon = NULL) {
 #' @param title Header title
 #'
 #' @export
-argonSidebarHeader <- function(title = NULL) {
-  shiny::tags$h6(class = "navbar-heading text-muted", title)
+argonSidebarHeader <- function(title) {
+  shiny::tags$li(
+    class = "nav-item mt-3",
+    tags$h6(
+      class = "ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6",
+      title
+    )
+  )
 }
 
 
@@ -183,5 +135,5 @@ argonSidebarHeader <- function(title = NULL) {
 #'
 #' @export
 argonSidebarDivider <- function() {
-  shiny::tags$hr(class = "my-3")
+  shiny::tags$hr(class = "horizontal dark mt-0")
 }

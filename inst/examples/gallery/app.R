@@ -2,6 +2,9 @@ library(shiny)
 library(argonR)
 library(argonDash)
 library(magrittr)
+library(thematic)
+
+thematic_shiny()
 
 # template
 source("sidebar.R")
@@ -16,7 +19,6 @@ source("alerts/alerts_tab.R")
 source("medias/medias_tab.R")
 source("items/items_tab.R")
 source("css_effects/effects_tab.R")
-source("sections/sections_tab.R")
 source("tables/tables_tab.R")
 
 # App
@@ -36,8 +38,7 @@ shiny::shinyApp(
         alerts_tab,
         images_tab,
         items_tab,
-        effects_tab,
-        sections_tab
+        effects_tab
       )
     ),
     footer = argonFooter

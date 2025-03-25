@@ -10,11 +10,9 @@ argonDashSidebar(
   id,
   brand_url = NULL,
   brand_logo = NULL,
-  vertical = TRUE,
-  side = c("left", "right"),
-  size = c("s", "md", "lg"),
-  skin = c("light", "dark"),
-  background = "white"
+  side = c("start", "end"),
+  skin = c("default", "white"),
+  color = c("primary", "dark", "info", "success", "warning", "danger")
 )
 }
 \arguments{
@@ -29,15 +27,11 @@ argonDashSidebar(
 
 \item{brand_logo}{Sidebar brand logo}
 
-\item{vertical}{Whether to display the sidebar in vertical mode. TRUE by default.}
-
-\item{side}{Sidebar side: "right" or "left". "left" by default.}
-
-\item{size}{Sidebar size: "s", "md", "lg". "md" by default.}
-
 \item{skin}{Sidebar skin. "light" by default.}
 
-\item{background}{Sidebar background color. See \url{https://demos.creative-tim.com/argon-design-system/docs/foundation/colors.html}.}
+\item{color}{Links color.}
+
+\item{size}{Sidebar size: "s", "md", "lg". "md" by default.}
 }
 \description{
 Build an argon dashboard sidebar

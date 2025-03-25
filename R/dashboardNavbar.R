@@ -9,13 +9,33 @@
 #' @export
 argonDashNavbar <- function(...) {
   shiny::tags$nav(
-    class = "navbar navbar-top navbar-expand-md navbar-dark",
-    id = "navbar-main",
+    class = "navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl ",
+    id = "navbarBlur",
+    `data-scroll` = "false",
+    `navbar-scroll` = "false",
     shiny::tags$div(
-      class = "container-fluid",
-      shiny::tags$ul(
-        class = "navbar-nav align-items-center d-none d-md-flex",
-        ...
+      class = "container-fluid py-1 px-3",
+      shiny::tags$div(
+        id = "navbar",
+        class = "collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4",
+        tags$ul(
+          class = "navbar-nav justify-content-end",
+          ...,
+          tags$li(
+            class = "nav-item ps-3 d-flex align-items-center",
+            tags$a(
+              href = "javascript:;",
+              class = "nav-link text-white p-0",
+              id = "iconNavbarSidenav",
+              tags$div(
+                class = "sidenav-toggler-inner",
+                tags$i(class = "sidenav-toggler-line bg-white"),
+                tags$i(class = "sidenav-toggler-line bg-white"),
+                tags$i(class = "sidenav-toggler-line bg-white")
+              )
+            )
+          )
+        )
       )
     )
   )
@@ -40,7 +60,7 @@ argonDropNav <- function(..., title = NULL, src = NULL, orientation = "right") {
     class = "nav-link pr-0",
     `aria-expanded` = "false",
     `aria-haspopup` = "true",
-    `data-toggle` = "dropdown",
+    `data-bs-toggle` = "dropdown",
     href = "#",
     role = "button",
     shiny::tags$div(

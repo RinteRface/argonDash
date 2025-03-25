@@ -4,7 +4,7 @@
 \alias{argonSidebarHeader}
 \title{A header to put inside \link{argonDashSidebar}}
 \usage{
-argonSidebarHeader(title = NULL)
+argonSidebarHeader(title)
 }
 \arguments{
 \item{title}{Header title}

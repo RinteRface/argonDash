@@ -2,44 +2,14 @@
 % Please edit documentation in R/dashboardHeader.R
 \name{argonDashHeader}
 \alias{argonDashHeader}
-\title{Create a Boostrap 4 dashboard header}
+\title{Create a Boostrap 5 dashboard header}
 \usage{
-argonDashHeader(
-  ...,
-  gradient = TRUE,
-  color = NULL,
-  separator = FALSE,
-  separator_color = "secondary",
-  bottom_padding = 4,
-  top_padding = 6,
-  background_img = NULL,
-  mask = FALSE,
-  opacity = 8,
-  height = 600
-)
+argonDashHeader(height = 300, color = "dark")
 }
 \arguments{
-\item{...}{Any element}
+\item{height}{Header height.}
 
-\item{gradient}{Whether to apply a gradient effect. TRUE by default.}
-
-\item{color}{Header color. See \url{https://demos.creative-tim.com/argon-design-system/docs/foundation/colors.html}.}
-
-\item{separator}{Header bottom separator. FALSE by default.}
-
-\item{separator_color}{Separator color. "secondary" by default. See \url{https://demos.creative-tim.com/argon-design-system/docs/foundation/colors.html}.}
-
-\item{bottom_padding}{Bottom padding. 4 by default.}
-
-\item{top_padding}{Bottom padding. 6 by default.}
-
-\item{background_img}{Background image url or path.}
-
-\item{mask}{Whether to add an opacity mask on the header. FALSE by default}
-
-\item{opacity}{Mask opacity. Between 0 and 8. Only if mask is TRUE.}
-
-\item{height}{Header height. 600px by default. Only if background image.}
+\item{color}{Background color.}
 }
 \description{
 Build an argon dashboard header
