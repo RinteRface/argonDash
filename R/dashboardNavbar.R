@@ -22,7 +22,7 @@ argonDashNavbar <- function(...) {
           class = "navbar-nav justify-content-end",
           ...,
           tags$li(
-            class = "nav-item ps-3 d-flex align-items-center",
+            class = "nav-item ps-3 d-flex align-items-center me-auto",
             tags$a(
               href = "javascript:;",
               class = "nav-link text-white p-0",

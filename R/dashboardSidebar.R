@@ -35,9 +35,9 @@ argonDashSidebar <- function(
   if (!is.null(skin)) sidebarCl <- paste0(sidebarCl, " bg-", skin)
 
   items <- list(...)
-  items <- htmltools::tagQuery(items)$find(".nav-link")$addAttrs(
-    class = sprintf("bg-gradient-%s", color)
-  )$allTags()
+  #items <- htmltools::tagQuery(items)$find(".nav-link")$addAttrs(
+  #  class = sprintf("bg-gradient-%s", color)
+  #)$allTags()
 
   shiny::tags$aside(
     class = sidebarCl,
@@ -79,7 +79,8 @@ argonDashSidebar <- function(
 #' @export
 argonSidebarMenu <- function(...) {
   shiny::tags$ul(
-    class = "navbar-nav",
+    class = "navbar-nav nav shiny-tab-input",
+    id = "sidebar-menu",
     ...
   )
 }
