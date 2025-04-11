@@ -12,3 +12,5 @@
 ^_pkgdown\.yml$
 ^pkgdown$
 ^README\.Rmd$
+^index\.Rmd$
+^index\.md$

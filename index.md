@@ -27,7 +27,7 @@ install.packages("argonDash")
 
 You can play with the demo app below and modify the code.
 
-<div class="card bslib-card bslib-mb-spacing html-fill-item html-fill-container" data-bslib-card-init data-full-screen="false" data-require-bs-caller="card()" data-require-bs-version="5" id="bslib-card-2321" style="margin: 0 auto; float: none;">
+<div class="card bslib-card bslib-mb-spacing html-fill-item html-fill-container" data-bslib-card-init data-full-screen="false" data-require-bs-caller="card()" data-require-bs-version="5" id="bslib-card-6679" style="margin: 0 auto; float: none;">
 <div class="card-body bslib-gap-spacing html-fill-item html-fill-container" style="margin-top:auto;margin-bottom:auto;flex:1 1 auto;">
 <iframe class="html-fill-item" src="https://shinylive.io/r/editor/#code=NobwRAdghgtgpmAXGKAHVA6ASmANGAYwHsIAXOMpMAGwEsAjAJykYE8AKFgcxIBEoAzgAsAlAB0IdJiw7DaEVuIgS5CgILpetRuwGsB5GBgBmtanHZiwcAB6xU5gQHouUaubZXcAAlRQCANZQXHDeALzeVtx8gkJWIkpgAL4AukA" height="700" width="100%" style="border: 1px solid rgba(0,0,0,0.175); border-radius: .375rem;" allowfullscreen="" allow="autoplay" data-external="1"></iframe>
 </div>
@@ -43,6 +43,16 @@ You can play with the demo app below and modify the code.
 ``` r
 library(argonDash)
 argonDashGallery()
+```
+
+We provide some placeholder images served in the `images` folder, so you
+just have to do this to access them:
+
+``` r
+argonAvatar(
+  size = "sm",
+  src = "images/undraw_profile-pic_fatv.svg"
+)
 ```
 
 ### Vertical layout

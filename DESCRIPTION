@@ -1,7 +1,7 @@
 Package: argonDash
 Type: Package
 Title: Argon Shiny Dashboard Template
-Version: 0.3.0.9000
+Version: 0.2.5
 Authors@R: c(
   person("David", "Granjon", email = "dgranjon@ymail.com", role = c("aut", "cre")),
   person(family = "RinteRface", role = "cph"),
@@ -16,7 +16,6 @@ Suggests: magrittr
 URL: https://github.com/RinteRface/argonDash, https://rinterface.github.io/argonDash/
 BugReports: https://github.com/RinteRface/argonDash/issues
 Encoding: UTF-8
-LazyData: true
-RoxygenNote: 7.0.1
+RoxygenNote: 7.3.2
 Depends: 
     R (>= 2.10)
