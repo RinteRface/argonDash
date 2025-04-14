@@ -10,4 +10,4 @@
 
 ## Revdep checks
 
-Nothing to declare
+Fix for CRAN notes

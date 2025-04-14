@@ -1,7 +1,7 @@
 # Add dashboard dependencies to a tag object
 addDeps <- function(x) {
   # Package images available at /images/<filename>
-  addResourcePath(
+  shiny::addResourcePath(
     "images",
     system.file("images", package = utils::packageName())
   )

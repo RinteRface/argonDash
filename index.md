@@ -5,7 +5,7 @@
 status](https://github.com/RinteRface/argonDash/workflows/R-CMD-check/badge.svg)](https://github.com/RinteRface/argonDash/actions)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/argonDash)](https://cran.r-project.org/package=argonDash)
-[![lifecycle](https://img.shields.io/badge/lifecycle-maturing-ff69b4.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![lifecycle](https://img.shields.io/badge/lifecycle-maturing-ff69b4.svg)](https://lifecycle.r-lib.org/articles/stages.html#maturing)
 [![cranlogs](https://cranlogs.r-pkg.org/badges/argonDash)](https://cran.r-project.org/package=argonDash)
 [![total](https://cranlogs.r-pkg.org/badges/grand-total/argonDash)](https://www.rpackages.io/package/argonDash)
 
@@ -27,7 +27,7 @@ install.packages("argonDash")
 
 You can play with the demo app below and modify the code.
 
-<div class="card bslib-card bslib-mb-spacing html-fill-item html-fill-container" data-bslib-card-init data-full-screen="false" data-require-bs-caller="card()" data-require-bs-version="5" id="bslib-card-6679" style="margin: 0 auto; float: none;">
+<div class="card bslib-card bslib-mb-spacing html-fill-item html-fill-container" data-bslib-card-init data-full-screen="false" data-require-bs-caller="card()" data-require-bs-version="5" id="bslib-card-4369" style="margin: 0 auto; float: none;">
 <div class="card-body bslib-gap-spacing html-fill-item html-fill-container" style="margin-top:auto;margin-bottom:auto;flex:1 1 auto;">
 <iframe class="html-fill-item" src="https://shinylive.io/r/editor/#code=NobwRAdghgtgpmAXGKAHVA6ASmANGAYwHsIAXOMpMAGwEsAjAJykYE8AKFgcxIBEoAzgAsAlAB0IdJiw7DaEVuIgS5CgILpetRuwGsB5GBgBmtanHZiwcAB6xU5gQHouUaubZXcAAlRQCANZQXHDeALzeVtx8gkJWIkpgAL4AukA" height="700" width="100%" style="border: 1px solid rgba(0,0,0,0.175); border-radius: .375rem;" allowfullscreen="" allow="autoplay" data-external="1"></iframe>
 </div>
